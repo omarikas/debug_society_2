@@ -458,7 +458,7 @@
 /* --- Responsive Design --- */
 @media (max-width: 768px) {
     nav { display: none; }
-    .mobile-menu-button { display: block; }
+    .mobile-menu-button { display: block; z-index: 3; }
     .hero-heading { font-size: 2.5rem; }
     .hero-subheading { font-size: 1rem; }
     .about-title, .services-title { font-size: 1.875rem; }
@@ -505,6 +505,26 @@
   20% { filter: invert(0); }
   30% { filter: invert(1); }
   40% { filter: invert(0); }
+}
+/* Add these inside your @media (max-width: 768px) block */
+
+nav.mobile-nav-active {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--white);
+    position: absolute;
+    top: 65px; /* Position it below the header */
+    left: 0;
+    width: 100%;
+    padding: 1rem 0;
+    border-bottom: 1px solid #e5e7eb;
+    z-index: 9999; /* Ensure it's on top of other content */
+}
+
+nav.mobile-nav-active a {
+    margin: 0.75rem 0; /* Add vertical spacing for links */
+    padding: 0.5rem;
 }
 
     </style>
@@ -673,6 +693,15 @@
     </footer>
 
     <script>
+        // --- Mobile Menu Toggle ---
+const menuButton = document.querySelector('.mobile-menu-button');
+const nav = document.querySelector('nav');
+
+if (menuButton && nav) {
+    menuButton.addEventListener('click', () => {
+        nav.classList.toggle('mobile-nav-active');
+    });
+}
         // --- Bug Animation Script ---
         const bugContainer = document.getElementById('bug-container');
         const canvas = document.getElementById('bug-lines-canvas');
