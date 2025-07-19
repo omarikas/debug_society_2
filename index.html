@@ -68,8 +68,67 @@
             font-size: 1.5rem;
             font-weight: 700;
             color: var(--dark-navy);
+            display: flex;
+            align-items: center;
+        }
+.ticker-wrap {
+            width: 100%;
+            overflow: hidden;
+            background: linear-gradient(90deg, #4f46e5, #8b5cf6); /* A nice gradient */
+            padding: 1rem 0;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            border-radius: 0.5rem;
         }
 
+        /*
+         * The container for the text that will be animated.
+         * - 'display: inline-block' allows it to be a block-level element that flows with text.
+         * - 'white-space: nowrap' prevents the text content from ever wrapping to a new line.
+         * - The 'animation' property applies our keyframe animation.
+         */
+        .ticker {
+            display: inline-block;
+            white-space: nowrap;
+            /* Animation properties: name, duration, timing-function, iteration-count */
+            animation: ticker-scroll 25s linear infinite;
+        }
+
+        /*
+         * Styling for the text elements themselves.
+         */
+        .ticker-item {
+            display: inline-block;
+            padding: 0 2rem;
+            font-size: 1.25rem;
+            font-weight: bold;
+            color: white;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+        
+        /* * Optional: Pause the animation when the user hovers over it.
+         */
+        .ticker-wrap:hover .ticker {
+            animation-play-state: paused;
+        }
+
+        /*
+         * The Keyframes Animation
+         * - We define an animation named 'ticker-scroll'.
+         * - It moves the '.ticker' element horizontally from its starting position (0%)
+         * to a position shifted to the left by 50% of its own width.
+         * - Since the text content inside is duplicated, moving by 50% brings the
+         * second copy perfectly into the position where the first one started,
+         * creating a seamless, infinite loop.
+         */
+        @keyframes ticker-scroll {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(-50%);
+            }
+        }
         nav a {
             color: var(--gray);
             text-decoration: none;
@@ -688,7 +747,7 @@
             border-radius: 5px;
             border: 2px solid var(--main-color);
             box-shadow: 4px 4px var(--main-color);
-          
+
         }
 
         .form>p {
@@ -792,6 +851,41 @@
             width: 1.5rem;
             height: 1.5rem;
         }
+        .hero-image {
+            position: relative;
+          width: 300px;
+          height: 300px;
+          justify-self: center;
+        }
+      
+
+       #hero-bug {
+    width: 300px;
+    height: auto;
+    max-width: 300px;
+    position: absolute;
+    top: 100vh; /* Start off-screen */
+    left: -2px;
+    animation: moveUp 3s ease-out forwards;
+}
+
+@keyframes moveUp {
+    from {
+        top: 100vh;
+    }
+    to {
+        top: 60px;
+    }
+}
+
+        #hero-logo {
+            width: 300px;
+            height: auto;
+            max-width: 300px;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
     </style>
 </head>
 
@@ -801,7 +895,9 @@
 
     <header>
         <div class="container header-content">
-            <div class="logo">BugFreeSociety</div>
+            <div class="logo">
+                <img src="./full.png" style="width: 100px;" alt="BugFreeSociety Avatar">
+                BugFreeSociety</div>
             <nav>
                 <a href="#">Home</a>
                 <a href="#">About</a>
@@ -824,20 +920,40 @@
     <main>
         <section class="hero-section">
             <div class="container">
-                <h1 class="hero-heading">Bug Free Society</h1>
-                <p class="hero-subheading">Code Without Limits. We build websites, applications, and tech projects that
-                    are fun, alive, and professional.</p>
-                <div class="hero-avatar">
-                    <img src="./logo.jpeg" alt="BugFreeSociety Avatar">
-                    <span>BugFreeSociety</span>
-                </div>
-                <div class="hero-buttons">
-                    <a href="#" class="btn btn-primary">Explore Services</a>
-                    <a href="#" class="btn btn-secondary">View Portfolio</a>
-                </div>
-            </div>
-        </section>
 
+                <div class="hero-content">
+                    <div class="hero-image">
+                        <img src="./logo.png" id="hero-logo" alt="BugFreeSociety Avatar">
+                        <img src="./bug.png" id="hero-bug" alt="BugFreeSociety Avatar">
+                    </div>
+                    <h1 class="hero-heading">Bug Free Society</h1>
+                    <p class="hero-subheading">Code Without Limits. We build websites, applications, and tech projects
+                        that
+                        are fun, alive, and professional.</p>
+                    
+                    <div class="hero-buttons">
+                        <a href="#" class="btn btn-primary">Explore Services</a>
+                        <a href="#" class="btn btn-secondary">View Portfolio</a>
+                    </div>
+                </div>
+        </section>
+ <div class="ticker-wrap">
+        <div class="ticker">
+            <!-- The text content is duplicated to create the seamless loop -->
+            <span class="ticker-item">HTML & CSS</span>
+            <span class="ticker-item">Infinite Scroll</span>
+            <span class="ticker-item">Web Design</span>
+            <span class="ticker-item">Front-End Magic</span>
+            <span class="ticker-item">Pure CSS Animation</span>
+            
+            <!-- Repeat the content -->
+            <span class="ticker-item">HTML & CSS</span>
+            <span class="ticker-item">Infinite Scroll</span>
+            <span class="ticker-item">Web Design</span>
+            <span class="ticker-item">Front-End Magic</span>
+            <span class="ticker-item">Pure CSS Animation</span>
+        </div>
+    </div>
         <section class="about-section">
             <div class="container">
                 <h2 class="about-title">About Us</h2>
