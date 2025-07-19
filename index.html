@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -19,7 +20,14 @@
         }
 
         /* --- Reset & Basic Styles --- */
-        body, h1, h2, h3, p, a, div, svg {
+        body,
+        h1,
+        h2,
+        h3,
+        p,
+        a,
+        div,
+        svg {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
@@ -139,7 +147,7 @@
             transition: all 0.3s;
             border: 2px solid transparent;
         }
-        
+
         .btn:hover {
             transform: translateY(-2px);
             box-shadow: 0 6px 12px rgba(26, 44, 91, 0.15);
@@ -149,7 +157,7 @@
             background-color: var(--dark-navy);
             color: var(--white);
         }
-        
+
         .btn-primary:hover {
             background-color: var(--primary-blue);
         }
@@ -159,7 +167,7 @@
             color: var(--primary-blue);
             border-color: var(--primary-blue);
         }
-        
+
         .btn-secondary:hover {
             background-color: var(--primary-blue);
             color: var(--white);
@@ -193,7 +201,7 @@
         .about-content p {
             margin-bottom: 1.5rem;
         }
-        
+
         .about-content p:last-child {
             margin-bottom: 0;
         }
@@ -210,18 +218,18 @@
         /* --- Bug & Connection Styles --- */
         .bug {
             position: absolute;
-            z-index: 0; 
+            z-index: 0;
             pointer-events: auto;
             cursor: pointer;
             transition: transform 0.3s ease-out, opacity 0.3s ease-out;
         }
-        
+
         #bug-lines-canvas {
             position: absolute;
             top: 0;
             left: 0;
-            z-index: 9998; 
-            pointer-events: none; 
+            z-index: 9998;
+            pointer-events: none;
         }
 
         /* --- Services Section Layout --- */
@@ -238,297 +246,555 @@
             color: var(--dark-navy);
             margin-bottom: 3rem;
         }
-        
+
         .services-grid {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            gap: 4rem; 
+            gap: 4rem;
             padding: 1rem;
         }
 
-/* --- Styles for Themed Card --- */
-.card {
-  width: 280px;
-  height: 380px;
-  background: var(--white);
-  border: 4px solid var(--dark-navy);
-  position: relative;
-  cursor: pointer;
-  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  overflow: hidden;
-  transform-style: preserve-3d;
-  perspective: 1000px;
-}
+        /* --- Styles for Themed Card --- */
+        .card {
+            width: 280px;
+            height: 380px;
+            background: var(--white);
+            border: 4px solid var(--dark-navy);
+            position: relative;
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            overflow: hidden;
+            transform-style: preserve-3d;
+            perspective: 1000px;
+        }
 
-.card-inner {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  transition: transform 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-  transform-style: preserve-3d;
-}
+        .card-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            transition: transform 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            transform-style: preserve-3d;
+        }
 
-.card:active .card-inner {
-  transform: rotateY(180deg);
-}
+        .card:active .card-inner {
+            transform: rotateY(180deg);
+        }
 
-.card-front,
-.card-back {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  backface-visibility: hidden;
-  background: var(--white);
-}
+        .card-front,
+        .card-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            background: var(--white);
+        }
 
-.card-back {
-  transform: rotateY(180deg);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  background: var(--dark-navy);
-  color: var(--white);
-  border: 8px solid var(--white);
-  box-sizing: border-box;
-}
+        .card-back {
+            transform: rotateY(180deg);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            background: var(--dark-navy);
+            color: var(--white);
+            border: 8px solid var(--white);
+            box-sizing: border-box;
+        }
 
-.added-text {
-  font-size: 24px;
-  font-weight: 900;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  margin-bottom: 20px;
-  animation: added-glitch 2s ease-out;
-}
+        .added-text {
+            font-size: 24px;
+            font-weight: 900;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            animation: added-glitch 2s ease-out;
+        }
 
-.added-subtext {
-  font-size: 14px;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  opacity: 0.8;
-}
+        .added-subtext {
+            font-size: 14px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            opacity: 0.8;
+        }
 
-.card::after {
-  content: "";
-  position: absolute;
-  top: -100%;
-  left: 0;
-  width: 100%;
-  height: 2px;
-  background: linear-gradient(
-    90deg,
-    transparent,
-    var(--accent-gold) 30%,
-    var(--accent-gold) 70%,
-    transparent
-  );
-  box-shadow:
-    0 0 8px var(--accent-gold),
-    0 0 16px var(--accent-gold),
-    0 0 24px rgba(245, 184, 65, 0.8);
-  opacity: 0.6;
-  z-index: 10;
-  animation: scanline 4s linear infinite;
-}
+        .card::after {
+            content: "";
+            position: absolute;
+            top: -100%;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(90deg,
+                    transparent,
+                    var(--accent-gold) 30%,
+                    var(--accent-gold) 70%,
+                    transparent);
+            box-shadow:
+                0 0 8px var(--accent-gold),
+                0 0 16px var(--accent-gold),
+                0 0 24px rgba(245, 184, 65, 0.8);
+            opacity: 0.6;
+            z-index: 10;
+            animation: scanline 4s linear infinite;
+        }
 
-.card:hover::after {
-  opacity: 1;
-  animation: scanline-fast 1.2s linear infinite;
-}
+        .card:hover::after {
+            opacity: 1;
+            animation: scanline-fast 1.2s linear infinite;
+        }
 
-.card:hover {
-  transform: rotate(-3deg) scale(1.05) skew(-1deg);
-  box-shadow: 10px 10px 0 var(--primary-blue);
-  border-width: 4px;
-  border-color: var(--primary-blue);
-}
+        .card:hover {
+            transform: rotate(-3deg) scale(1.05) skew(-1deg);
+            box-shadow: 10px 10px 0 var(--primary-blue);
+            border-width: 4px;
+            border-color: var(--primary-blue);
+        }
 
-.product-image {
-  width: 100%;
-  height: 150px;
-  background: var(--dark-navy);
-  position: relative;
-  border-bottom: 8px solid var(--dark-navy);
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+        .product-image {
+            width: 100%;
+            height: 150px;
+            background: var(--dark-navy);
+            position: relative;
+            border-bottom: 8px solid var(--dark-navy);
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
 
-.product-svg {
-  width: 80px;
-  height: 80px;
-  transition: all 0.3s ease;
-}
+        .product-svg {
+            width: 80px;
+            height: 80px;
+            transition: all 0.3s ease;
+        }
 
-/* --- NEW: SVG Color Styling --- */
-.product-svg .svg-p-bg { fill: var(--white); }
-.product-svg .svg-p-fg { fill: var(--dark-navy); }
-.product-svg .svg-s-white { fill: var(--white); stroke: var(--white); }
-.product-svg .svg-s-dark { fill: var(--dark-navy); stroke: var(--white); }
-.product-svg .svg-s-accent { fill: var(--primary-blue); }
-.product-svg .svg-s-accent-stroke { stroke: var(--primary-blue); fill: none;}
+        /* --- NEW: SVG Color Styling --- */
+        .product-svg .svg-p-bg {
+            fill: var(--white);
+        }
 
-.card:hover .product-svg {
-  animation:
-    brutal-spin 0.4s ease-in-out,
-    svg-glitch 0.6s ease-in-out;
-  transform: scale(1.2);
-}
+        .product-svg .svg-p-fg {
+            fill: var(--dark-navy);
+        }
 
-.card-content {
-  padding: 16px;
-  position: relative;
-  z-index: 2;
-  background: var(--white);
-  height: calc(100% - 158px);
-  display: flex;
-  flex-direction: column;
-}
+        .product-svg .svg-s-white {
+            fill: var(--white);
+            stroke: var(--white);
+        }
 
-.product-title {
-  font-size: 16px;
-  font-weight: 900;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  margin-bottom: 6px;
-  border-bottom: 4px solid var(--dark-navy);
-  color: var(--dark-navy);
-  padding-bottom: 2px;
-  line-height: 1.1;
-}
+        .product-svg .svg-s-dark {
+            fill: var(--dark-navy);
+            stroke: var(--white);
+        }
 
-.product-description {
-  font-family: 'Inter', sans-serif;
-  color: var(--gray);
-  font-size: 13px;
-  line-height: 1.5;
-  text-transform: none;
-  letter-spacing: 0;
-  margin-top: 8px;
-  margin-bottom: 12px;
-  flex-grow: 1;
-}
+        .product-svg .svg-s-accent {
+            fill: var(--primary-blue);
+        }
 
-.buy-button {
-  width: 100%;
-  padding: 10px;
-  background: var(--dark-navy);
-  color: var(--white);
-  border: 4px solid var(--dark-navy);
-  font-family: "Helvitica", monospace;
-  text-align: center;
-  font-size: 14px;
-  font-weight: 900;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  cursor: pointer;
-  transition: all 0.2s ease;
-  position: relative;
-  overflow: hidden;
-  margin-top: auto;
-}
+        .product-svg .svg-s-accent-stroke {
+            stroke: var(--primary-blue);
+            fill: none;
+        }
 
-.buy-button::before {
-  content: "DETAILS";
-  position: absolute;
-  top: 10px;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: var(--primary-blue);
-  transition: all 0.3s ease;
-}
+        .card:hover .product-svg {
+            animation:
+                brutal-spin 0.4s ease-in-out,
+                svg-glitch 0.6s ease-in-out;
+            transform: scale(1.2);
+        }
 
-.card:hover .buy-button::before {
-  left: 0;
-}
+        .card-content {
+            padding: 16px;
+            position: relative;
+            z-index: 2;
+            background: var(--white);
+            height: calc(100% - 158px);
+            display: flex;
+            flex-direction: column;
+        }
 
-.card:hover .buy-button {
-  color: var(--white);
-}
+        .product-title {
+            font-size: 16px;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 6px;
+            border-bottom: 4px solid var(--dark-navy);
+            color: var(--dark-navy);
+            padding-bottom: 2px;
+            line-height: 1.1;
+        }
 
-.card:hover .buy-button span {
-  position: relative;
-  z-index: 1;
-}
+        .product-description {
+            font-family: 'Inter', sans-serif;
+            color: var(--gray);
+            font-size: 13px;
+            line-height: 1.5;
+            text-transform: none;
+            letter-spacing: 0;
+            margin-top: 8px;
+            margin-bottom: 12px;
+            flex-grow: 1;
+        }
 
-/* --- Responsive Design --- */
-@media (max-width: 768px) {
-    nav { display: none; }
-    .mobile-menu-button { display: block; z-index: 3; }
-    .hero-heading { font-size: 2.5rem; }
-    .hero-subheading { font-size: 1rem; }
-    .about-title, .services-title { font-size: 1.875rem; }
-    .about-content { font-size: 1rem; text-align: left; }
-    .hero-buttons { flex-direction: column; gap: 0.75rem; }
-}
+        .buy-button {
+            width: 100%;
+            padding: 10px;
+            background: var(--dark-navy);
+            color: var(--white);
+            border: 4px solid var(--dark-navy);
+            font-family: "Helvitica", monospace;
+            text-align: center;
+            font-size: 14px;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            position: relative;
+            overflow: hidden;
+            margin-top: auto;
+        }
 
-@keyframes added-glitch {
-  0% { transform: scale(0.8); filter: invert(0); opacity: 0; }
-  10% { transform: scale(1.2) skew(-5deg); filter: invert(1); opacity: 1; }
-  20% { transform: scale(0.9) skew(3deg); filter: invert(0); }
-  30% { transform: scale(1.1) skew(-2deg); filter: invert(1); }
-  40% { transform: scale(1) skew(1deg); filter: invert(0); }
-  50% { transform: scale(1.05) skew(0deg); filter: invert(1); }
-  70% { transform: scale(1); filter: invert(0); }
-  100% { transform: scale(1); filter: invert(0); }
-}
+        .buy-button::before {
+            content: "DETAILS";
+            position: absolute;
+            top: 10px;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: var(--primary-blue);
+            transition: all 0.3s ease;
+        }
 
-@keyframes scanline {
-  0% { top: -100%; opacity: 0; }
-  3% { opacity: 0.3; }
-  97% { opacity: 0.3; }
-  100% { top: 100%; opacity: 0; }
-}
+        .card:hover .buy-button::before {
+            left: 0;
+        }
 
-@keyframes scanline-fast {
-  0% { top: -100%; opacity: 0; }
-  8% { opacity: 1; }
-  92% { opacity: 1; }
-  100% { top: 100%; opacity: 0; }
-}
+        .card:hover .buy-button {
+            color: var(--white);
+        }
 
-@keyframes brutal-spin {
-  0% { transform: scale(1.2) rotate(0deg); }
-  25% { transform: scale(1.4) rotate(90deg); }
-  50% { transform: scale(1.2) rotate(180deg); }
-  75% { transform: scale(1.4) rotate(270deg); }
-  100% { transform: scale(1.2) rotate(360deg); }
-}
+        .card:hover .buy-button span {
+            position: relative;
+            z-index: 1;
+        }
 
-@keyframes svg-glitch {
-  0%, 100% { filter: invert(0); }
-  10% { filter: invert(1); }
-  20% { filter: invert(0); }
-  30% { filter: invert(1); }
-  40% { filter: invert(0); }
-}
-/* Add these inside your @media (max-width: 768px) block */
+        /* --- Responsive Design --- */
+        @media (max-width: 768px) {
+            nav {
+                display: none;
+            }
 
-nav.mobile-nav-active {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: var(--white);
-    position: absolute;
-    top: 65px; /* Position it below the header */
-    left: 0;
-    width: 100%;
-    padding: 1rem 0;
-    border-bottom: 1px solid #e5e7eb;
-    z-index: 9999; /* Ensure it's on top of other content */
-}
+            .mobile-menu-button {
+                display: block;
+                z-index: 3;
+            }
 
-nav.mobile-nav-active a {
-    margin: 0.75rem 0; /* Add vertical spacing for links */
-    padding: 0.5rem;
-}
+            .hero-heading {
+                font-size: 2.5rem;
+            }
 
+            .hero-subheading {
+                font-size: 1rem;
+            }
+
+            .about-title,
+            .services-title {
+                font-size: 1.875rem;
+            }
+
+            .about-content {
+                font-size: 1rem;
+                text-align: left;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+                gap: 0.75rem;
+            }
+        }
+
+        @keyframes added-glitch {
+            0% {
+                transform: scale(0.8);
+                filter: invert(0);
+                opacity: 0;
+            }
+
+            10% {
+                transform: scale(1.2) skew(-5deg);
+                filter: invert(1);
+                opacity: 1;
+            }
+
+            20% {
+                transform: scale(0.9) skew(3deg);
+                filter: invert(0);
+            }
+
+            30% {
+                transform: scale(1.1) skew(-2deg);
+                filter: invert(1);
+            }
+
+            40% {
+                transform: scale(1) skew(1deg);
+                filter: invert(0);
+            }
+
+            50% {
+                transform: scale(1.05) skew(0deg);
+                filter: invert(1);
+            }
+
+            70% {
+                transform: scale(1);
+                filter: invert(0);
+            }
+
+            100% {
+                transform: scale(1);
+                filter: invert(0);
+            }
+        }
+
+        @keyframes scanline {
+            0% {
+                top: -100%;
+                opacity: 0;
+            }
+
+            3% {
+                opacity: 0.3;
+            }
+
+            97% {
+                opacity: 0.3;
+            }
+
+            100% {
+                top: 100%;
+                opacity: 0;
+            }
+        }
+
+        @keyframes scanline-fast {
+            0% {
+                top: -100%;
+                opacity: 0;
+            }
+
+            8% {
+                opacity: 1;
+            }
+
+            92% {
+                opacity: 1;
+            }
+
+            100% {
+                top: 100%;
+                opacity: 0;
+            }
+        }
+
+        @keyframes brutal-spin {
+            0% {
+                transform: scale(1.2) rotate(0deg);
+            }
+
+            25% {
+                transform: scale(1.4) rotate(90deg);
+            }
+
+            50% {
+                transform: scale(1.2) rotate(180deg);
+            }
+
+            75% {
+                transform: scale(1.4) rotate(270deg);
+            }
+
+            100% {
+                transform: scale(1.2) rotate(360deg);
+            }
+        }
+
+        @keyframes svg-glitch {
+
+            0%,
+            100% {
+                filter: invert(0);
+            }
+
+            10% {
+                filter: invert(1);
+            }
+
+            20% {
+                filter: invert(0);
+            }
+
+            30% {
+                filter: invert(1);
+            }
+
+            40% {
+                filter: invert(0);
+            }
+        }
+
+        /* Add these inside your @media (max-width: 768px) block */
+
+        nav.mobile-nav-active {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: var(--white);
+            position: absolute;
+            top: 65px;
+            /* Position it below the header */
+            left: 0;
+            width: 100%;
+            padding: 1rem 0;
+            border-bottom: 1px solid #e5e7eb;
+            z-index: 9999;
+            /* Ensure it's on top of other content */
+        }
+
+        nav.mobile-nav-active a {
+            margin: 0.75rem 0;
+            /* Add vertical spacing for links */
+            padding: 0.5rem;
+        }
+
+
+        /* DEOXY Was Here */
+        .form {
+            --input-focus: #2d8cf0;
+            --font-color: #323232;
+            --font-color-sub: var(--accent-gold);
+            --bg-color: var(--white);
+            --main-color: var(--primary-blue);
+            padding: 20px;
+            background: var(--background);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            border-radius: 5px;
+            border: 2px solid var(--main-color);
+            box-shadow: 4px 4px var(--main-color);
+          
+        }
+
+        .form>p {
+            font-family: var(--font-DelaGothicOne);
+            color: var(--font-color);
+            font-weight: 700;
+            font-size: 20px;
+            margin-bottom: 15px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form>p>span {
+            font-family: var(--font-SpaceMono);
+            color: var(--font-color-sub);
+            font-weight: 600;
+            font-size: 17px;
+        }
+
+        .separator {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 5px;
+        }
+
+        .separator>div {
+            width: 100px;
+            height: 3px;
+            border-radius: 5px;
+            background-color: var(--font-color-sub);
+        }
+
+        .separator>span {
+            color: var(--font-color);
+            font-family: var(--font-SpaceMono);
+            font-weight: 600;
+        }
+
+        .oauthButton {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 5px;
+            /* margin: 50px auto 0 auto; */
+            padding: auto 15px 15px auto;
+            width: 250px;
+            height: 40px;
+            border-radius: 5px;
+            border: 2px solid var(--main-color);
+            background-color: var(--bg-color);
+            box-shadow: 4px 4px var(--main-color);
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--font-color);
+            cursor: pointer;
+            transition: all 250ms;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+        }
+
+        .oauthButton::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 0;
+            background-color: #212121;
+            z-index: -1;
+            -webkit-box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+            box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+            transition: all 250ms;
+        }
+
+        .oauthButton:hover {
+            color: #e8e8e8;
+        }
+
+        .oauthButton:hover::before {
+            width: 100%;
+        }
+
+        .form>input {
+            width: 250px;
+            height: 40px;
+            border-radius: 5px;
+            border: 2px solid var(--main-color);
+            background-color: var(--bg-color);
+            box-shadow: 4px 4px var(--main-color);
+            font-size: 15px;
+            font-weight: 600;
+            color: var(--font-color);
+            padding: 5px 10px;
+            outline: none;
+        }
+
+        .icon {
+            width: 1.5rem;
+            height: 1.5rem;
+        }
     </style>
 </head>
+
 <body>
     <canvas id="bug-lines-canvas"></canvas>
     <div id="bug-container"></div>
@@ -545,7 +811,11 @@ nav.mobile-nav-active a {
             </nav>
             <div class="mobile-menu-button">
                 <button>
-                    <svg style="width: 1.5rem; height: 1.5rem;" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                    <svg style="width: 1.5rem; height: 1.5rem;" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
                 </button>
             </div>
         </div>
@@ -555,7 +825,8 @@ nav.mobile-nav-active a {
         <section class="hero-section">
             <div class="container">
                 <h1 class="hero-heading">Bug Free Society</h1>
-                <p class="hero-subheading">Code Without Limits. We build websites, applications, and tech projects that are fun, alive, and professional.</p>
+                <p class="hero-subheading">Code Without Limits. We build websites, applications, and tech projects that
+                    are fun, alive, and professional.</p>
                 <div class="hero-avatar">
                     <img src="./logo.jpeg" alt="BugFreeSociety Avatar">
                     <span>BugFreeSociety</span>
@@ -571,8 +842,17 @@ nav.mobile-nav-active a {
             <div class="container">
                 <h2 class="about-title">About Us</h2>
                 <div class="about-content">
-                    <p>Welcome to BugFreeSociety! We're not just a company; we're a movement born from the belief that technology should simply work. The name "BugFreeSociety" reflects our core conviction: it's our collective responsibility to ensure that the code powering our digital world is flawless, enabling everyone to achieve their goals without the frustration of bugs or mistakes. We apply this principle to everything we touch, from applications and websites to chatbots, games, and beyond.</p>
-                    <p>Our journey began humbly with two friends at the GUC (German University in Cairo). What started as a small idea -- developing a few simple websites -- quickly blossomed into a shared vision. We realized the immense need for truly reliable software, and that passion ignited the spark to build BugFreeSociety into the company it is today. We're driven by that same initial excitement and a commitment to quality in every line of code.</p>
+                    <p>Welcome to BugFreeSociety! We're not just a company; we're a movement born from the belief that
+                        technology should simply work. The name "BugFreeSociety" reflects our core conviction: it's our
+                        collective responsibility to ensure that the code powering our digital world is flawless,
+                        enabling everyone to achieve their goals without the frustration of bugs or mistakes. We apply
+                        this principle to everything we touch, from applications and websites to chatbots, games, and
+                        beyond.</p>
+                    <p>Our journey began humbly with two friends at the GUC (German University in Cairo). What started
+                        as a small idea -- developing a few simple websites -- quickly blossomed into a shared vision.
+                        We realized the immense need for truly reliable software, and that passion ignited the spark to
+                        build BugFreeSociety into the company it is today. We're driven by that same initial excitement
+                        and a commitment to quality in every line of code.</p>
                 </div>
             </div>
         </section>
@@ -581,110 +861,298 @@ nav.mobile-nav-active a {
             <div class="container">
                 <h2 class="services-title">What We Do</h2>
                 <div class="services-grid">
-                    
+
                     <div class="card">
-                      <div class="card-inner">
-                        <div class="card-front">
-                          <div class="product-image"><svg class="product-svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="p1" patternUnits="userSpaceOnUse" width="8" height="8"><rect class="svg-p-bg" width="8" height="8"></rect><rect class="svg-p-fg" width="4" height="4"></rect><rect class="svg-p-fg" x="4" y="4" width="4" height="4"></rect></pattern></defs><polygon class="svg-s-white" points="50,10 90,30 90,70 50,90 10,70 10,30" stroke-width="3"></polygon><polygon class="svg-s-dark" points="50,20 80,35 80,65 50,80 20,65 20,35" stroke-width="2"></polygon><rect x="35" y="35" width="30" height="30" fill="url(#p1)"></rect><polygon class="svg-s-white" points="50,25 70,40 50,55 30,40"></polygon><circle class="svg-s-accent" cx="50" cy="45" r="8"></circle><rect class="svg-s-white" x="46" y="41" width="8" height="8"></rect><polygon class="svg-s-white" points="50,60 65,70 50,75 35,70"></polygon></svg></div>
-                          <div class="card-content">
-                            <div class="product-title">Websites</div>
-                            <div class="product-description">Crafting dynamic, responsive, and user-friendly websites that stand out.</div>
-                            <div class="buy-button"><div><span>Details</span></div></div>
-                          </div>
+                        <div class="card-inner">
+                            <div class="card-front">
+                                <div class="product-image"><svg class="product-svg" viewBox="0 0 100 100"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <defs>
+                                            <pattern id="p1" patternUnits="userSpaceOnUse" width="8" height="8">
+                                                <rect class="svg-p-bg" width="8" height="8"></rect>
+                                                <rect class="svg-p-fg" width="4" height="4"></rect>
+                                                <rect class="svg-p-fg" x="4" y="4" width="4" height="4"></rect>
+                                            </pattern>
+                                        </defs>
+                                        <polygon class="svg-s-white" points="50,10 90,30 90,70 50,90 10,70 10,30"
+                                            stroke-width="3"></polygon>
+                                        <polygon class="svg-s-dark" points="50,20 80,35 80,65 50,80 20,65 20,35"
+                                            stroke-width="2"></polygon>
+                                        <rect x="35" y="35" width="30" height="30" fill="url(#p1)"></rect>
+                                        <polygon class="svg-s-white" points="50,25 70,40 50,55 30,40"></polygon>
+                                        <circle class="svg-s-accent" cx="50" cy="45" r="8"></circle>
+                                        <rect class="svg-s-white" x="46" y="41" width="8" height="8"></rect>
+                                        <polygon class="svg-s-white" points="50,60 65,70 50,75 35,70"></polygon>
+                                    </svg></div>
+                                <div class="card-content">
+                                    <div class="product-title">Websites</div>
+                                    <div class="product-description">Crafting dynamic, responsive, and user-friendly
+                                        websites that stand out.</div>
+                                    <div class="buy-button">
+                                        <div><span>Details</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-back">
+                                <div class="added-text">Websites</div>
+                                <div class="added-subtext">Our Approach</div>
+                            </div>
                         </div>
-                        <div class="card-back"><div class="added-text">Websites</div><div class="added-subtext">Our Approach</div></div>
-                      </div>
                     </div>
 
                     <div class="card">
-                      <div class="card-inner">
-                        <div class="card-front">
-                          <div class="product-image"><svg class="product-svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="p2" patternUnits="userSpaceOnUse" width="8" height="8"><rect class="svg-p-bg" width="8" height="8"></rect><rect class="svg-p-fg" width="4" height="4"></rect><rect class="svg-p-fg" x="4" y="4" width="4" height="4"></rect></pattern></defs><polygon class="svg-s-white" points="50,10 90,30 90,70 50,90 10,70 10,30" stroke-width="3"></polygon><polygon class="svg-s-dark" points="50,20 80,35 80,65 50,80 20,65 20,35" stroke-width="2"></polygon><rect x="35" y="35" width="30" height="30" fill="url(#p2)"></rect><polygon class="svg-s-white" points="50,25 70,40 50,55 30,40"></polygon><circle class="svg-s-accent" cx="50" cy="45" r="8"></circle><rect class="svg-s-white" x="46" y="41" width="8" height="8"></rect><polygon class="svg-s-white" points="50,60 65,70 50,75 35,70"></polygon></svg></div>
-                          <div class="card-content">
-                            <div class="product-title">Applications</div>
-                            <div class="product-description">Developing intuitive and powerful applications for various platforms.</div>
-                            <div class="buy-button"><div><span>Details</span></div></div>
-                          </div>
+                        <div class="card-inner">
+                            <div class="card-front">
+                                <div class="product-image"><svg class="product-svg" viewBox="0 0 100 100"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <defs>
+                                            <pattern id="p2" patternUnits="userSpaceOnUse" width="8" height="8">
+                                                <rect class="svg-p-bg" width="8" height="8"></rect>
+                                                <rect class="svg-p-fg" width="4" height="4"></rect>
+                                                <rect class="svg-p-fg" x="4" y="4" width="4" height="4"></rect>
+                                            </pattern>
+                                        </defs>
+                                        <polygon class="svg-s-white" points="50,10 90,30 90,70 50,90 10,70 10,30"
+                                            stroke-width="3"></polygon>
+                                        <polygon class="svg-s-dark" points="50,20 80,35 80,65 50,80 20,65 20,35"
+                                            stroke-width="2"></polygon>
+                                        <rect x="35" y="35" width="30" height="30" fill="url(#p2)"></rect>
+                                        <polygon class="svg-s-white" points="50,25 70,40 50,55 30,40"></polygon>
+                                        <circle class="svg-s-accent" cx="50" cy="45" r="8"></circle>
+                                        <rect class="svg-s-white" x="46" y="41" width="8" height="8"></rect>
+                                        <polygon class="svg-s-white" points="50,60 65,70 50,75 35,70"></polygon>
+                                    </svg></div>
+                                <div class="card-content">
+                                    <div class="product-title">Applications</div>
+                                    <div class="product-description">Developing intuitive and powerful applications for
+                                        various platforms.</div>
+                                    <div class="buy-button">
+                                        <div><span>Details</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-back">
+                                <div class="added-text">Applications</div>
+                                <div class="added-subtext">Our Approach</div>
+                            </div>
                         </div>
-                        <div class="card-back"><div class="added-text">Applications</div><div class="added-subtext">Our Approach</div></div>
-                      </div>
-                    </div>
-                    
-                    <div class="card">
-                      <div class="card-inner">
-                        <div class="card-front">
-                          <div class="product-image"><svg class="product-svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="p3" patternUnits="userSpaceOnUse" width="8" height="8"><rect class="svg-p-bg" width="8" height="8"></rect><rect class="svg-p-fg" width="4" height="4"></rect><rect class="svg-p-fg" x="4" y="4" width="4" height="4"></rect></pattern></defs><polygon class="svg-s-white" points="50,10 90,30 90,70 50,90 10,70 10,30" stroke-width="3"></polygon><polygon class="svg-s-dark" points="50,20 80,35 80,65 50,80 20,65 20,35" stroke-width="2"></polygon><rect x="35" y="35" width="30" height="30" fill="url(#p3)"></rect><polygon class="svg-s-white" points="50,25 70,40 50,55 30,40"></polygon><circle class="svg-s-accent" cx="50" cy="45" r="8"></circle><rect class="svg-s-white" x="46" y="41" width="8" height="8"></rect><polygon class="svg-s-white" points="50,60 65,70 50,75 35,70"></polygon></svg></div>
-                          <div class="card-content">
-                            <div class="product-title">Games</div>
-                            <div class="product-description">Creating immersive and bug-free gaming experiences.</div>
-                            <div class="buy-button"><div><span>Details</span></div></div>
-                          </div>
-                        </div>
-                        <div class="card-back"><div class="added-text">Games</div><div class="added-subtext">Our Approach</div></div>
-                      </div>
-                    </div>
-
-                    <div class="card">
-                      <div class="card-inner">
-                        <div class="card-front">
-                          <div class="product-image"><svg class="product-svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="p4" patternUnits="userSpaceOnUse" width="8" height="8"><rect class="svg-p-bg" width="8" height="8"></rect><rect class="svg-p-fg" width="4" height="4"></rect><rect class="svg-p-fg" x="4" y="4" width="4" height="4"></rect></pattern></defs><polygon class="svg-s-white" points="50,10 90,30 90,70 50,90 10,70 10,30" stroke-width="3"></polygon><polygon class="svg-s-dark" points="50,20 80,35 80,65 50,80 20,65 20,35" stroke-width="2"></polygon><rect x="35" y="35" width="30" height="30" fill="url(#p4)"></rect><polygon class="svg-s-white" points="50,25 70,40 50,55 30,40"></polygon><circle class="svg-s-accent" cx="50" cy="45" r="8"></circle><rect class="svg-s-white" x="46" y="41" width="8" height="8"></rect><polygon class="svg-s-white" points="50,60 65,70 50,75 35,70"></polygon></svg></div>
-                          <div class="card-content">
-                            <div class="product-title">Dashboards</div>
-                            <div class="product-description">Designing clear, effective dashboards for data visualization and management.</div>
-                            <div class="buy-button"><div><span>Details</span></div></div>
-                          </div>
-                        </div>
-                        <div class="card-back"><div class="added-text">Dashboards</div><div class="added-subtext">Our Approach</div></div>
-                      </div>
                     </div>
 
                     <div class="card">
-                      <div class="card-inner">
-                        <div class="card-front">
-                          <div class="product-image"><svg class="product-svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="p5" patternUnits="userSpaceOnUse" width="8" height="8"><rect class="svg-p-bg" width="8" height="8"></rect><rect class="svg-p-fg" width="4" height="4"></rect><rect class="svg-p-fg" x="4" y="4" width="4" height="4"></rect></pattern></defs><polygon class="svg-s-white" points="50,10 90,30 90,70 50,90 10,70 10,30" stroke-width="3"></polygon><polygon class="svg-s-dark" points="50,20 80,35 80,65 50,80 20,65 20,35" stroke-width="2"></polygon><rect x="35" y="35" width="30" height="30" fill="url(#p5)"></rect><polygon class="svg-s-white" points="50,25 70,40 50,55 30,40"></polygon><circle class="svg-s-accent" cx="50" cy="45" r="8"></circle><rect class="svg-s-white" x="46" y="41" width="8" height="8"></rect><polygon class="svg-s-white" points="50,60 65,70 50,75 35,70"></polygon></svg></div>
-                          <div class="card-content">
-                            <div class="product-title">Optimization</div>
-                            <div class="product-description">Meticulously identifying and resolving issues in existing code to improve performance and stability.</div>
-                            <div class="buy-button"><div><span>Details</span></div></div>
-                          </div>
+                        <div class="card-inner">
+                            <div class="card-front">
+                                <div class="product-image"><svg class="product-svg" viewBox="0 0 100 100"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <defs>
+                                            <pattern id="p3" patternUnits="userSpaceOnUse" width="8" height="8">
+                                                <rect class="svg-p-bg" width="8" height="8"></rect>
+                                                <rect class="svg-p-fg" width="4" height="4"></rect>
+                                                <rect class="svg-p-fg" x="4" y="4" width="4" height="4"></rect>
+                                            </pattern>
+                                        </defs>
+                                        <polygon class="svg-s-white" points="50,10 90,30 90,70 50,90 10,70 10,30"
+                                            stroke-width="3"></polygon>
+                                        <polygon class="svg-s-dark" points="50,20 80,35 80,65 50,80 20,65 20,35"
+                                            stroke-width="2"></polygon>
+                                        <rect x="35" y="35" width="30" height="30" fill="url(#p3)"></rect>
+                                        <polygon class="svg-s-white" points="50,25 70,40 50,55 30,40"></polygon>
+                                        <circle class="svg-s-accent" cx="50" cy="45" r="8"></circle>
+                                        <rect class="svg-s-white" x="46" y="41" width="8" height="8"></rect>
+                                        <polygon class="svg-s-white" points="50,60 65,70 50,75 35,70"></polygon>
+                                    </svg></div>
+                                <div class="card-content">
+                                    <div class="product-title">Games</div>
+                                    <div class="product-description">Creating immersive and bug-free gaming experiences.
+                                    </div>
+                                    <div class="buy-button">
+                                        <div><span>Details</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-back">
+                                <div class="added-text">Games</div>
+                                <div class="added-subtext">Our Approach</div>
+                            </div>
                         </div>
-                        <div class="card-back"><div class="added-text">Optimization</div><div class="added-subtext">Our Approach</div></div>
-                      </div>
                     </div>
 
                     <div class="card">
-                      <div class="card-inner">
-                        <div class="card-front">
-                          <div class="product-image"><svg class="product-svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="p6" patternUnits="userSpaceOnUse" width="8" height="8"><rect class="svg-p-bg" width="8" height="8"></rect><rect class="svg-p-fg" width="4" height="4"></rect><rect class="svg-p-fg" x="4" y="4" width="4" height="4"></rect></pattern></defs><polygon class="svg-s-white" points="50,10 90,30 90,70 50,90 10,70 10,30" stroke-width="3"></polygon><polygon class="svg-s-dark" points="50,20 80,35 80,65 50,80 20,65 20,35" stroke-width="2"></polygon><rect x="35" y="35" width="30" height="30" fill="url(#p6)"></rect><polygon class="svg-s-white" points="50,25 70,40 50,55 30,40"></polygon><circle class="svg-s-accent" cx="50" cy="45" r="8"></circle><rect class="svg-s-white" x="46" y="41" width="8" height="8"></rect><polygon class="svg-s-white" points="50,60 65,70 50,75 35,70"></polygon></svg></div>
-                          <div class="card-content">
-                            <div class="product-title">Animation</div>
-                            <div class="product-description">Integrating stunning 2D/3D visuals and animations to enhance the aesthetic appeal and user engagement.</div>
-                            <div class="buy-button"><div><span>Details</span></div></div>
-                          </div>
+                        <div class="card-inner">
+                            <div class="card-front">
+                                <div class="product-image"><svg class="product-svg" viewBox="0 0 100 100"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <defs>
+                                            <pattern id="p4" patternUnits="userSpaceOnUse" width="8" height="8">
+                                                <rect class="svg-p-bg" width="8" height="8"></rect>
+                                                <rect class="svg-p-fg" width="4" height="4"></rect>
+                                                <rect class="svg-p-fg" x="4" y="4" width="4" height="4"></rect>
+                                            </pattern>
+                                        </defs>
+                                        <polygon class="svg-s-white" points="50,10 90,30 90,70 50,90 10,70 10,30"
+                                            stroke-width="3"></polygon>
+                                        <polygon class="svg-s-dark" points="50,20 80,35 80,65 50,80 20,65 20,35"
+                                            stroke-width="2"></polygon>
+                                        <rect x="35" y="35" width="30" height="30" fill="url(#p4)"></rect>
+                                        <polygon class="svg-s-white" points="50,25 70,40 50,55 30,40"></polygon>
+                                        <circle class="svg-s-accent" cx="50" cy="45" r="8"></circle>
+                                        <rect class="svg-s-white" x="46" y="41" width="8" height="8"></rect>
+                                        <polygon class="svg-s-white" points="50,60 65,70 50,75 35,70"></polygon>
+                                    </svg></div>
+                                <div class="card-content">
+                                    <div class="product-title">Dashboards</div>
+                                    <div class="product-description">Designing clear, effective dashboards for data
+                                        visualization and management.</div>
+                                    <div class="buy-button">
+                                        <div><span>Details</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-back">
+                                <div class="added-text">Dashboards</div>
+                                <div class="added-subtext">Our Approach</div>
+                            </div>
                         </div>
-                        <div class="card-back"><div class="added-text">Animation</div><div class="added-subtext">Our Approach</div></div>
-                      </div>
                     </div>
-                    
+
                     <div class="card">
-                      <div class="card-inner">
-                        <div class="card-front">
-                          <div class="product-image"><svg class="product-svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="p7" patternUnits="userSpaceOnUse" width="8" height="8"><rect class="svg-p-bg" width="8" height="8"></rect><rect class="svg-p-fg" width="4" height="4"></rect><rect class="svg-p-fg" x="4" y="4" width="4" height="4"></rect></pattern></defs><polygon class="svg-s-white" points="50,10 90,30 90,70 50,90 10,70 10,30" stroke-width="3"></polygon><polygon class="svg-s-dark" points="50,20 80,35 80,65 50,80 20,65 20,35" stroke-width="2"></polygon><rect x="35" y="35" width="30" height="30" fill="url(#p7)"></rect><polygon class="svg-s-white" points="50,25 70,40 50,55 30,40"></polygon><circle class="svg-s-accent" cx="50" cy="45" r="8"></circle><rect class="svg-s-white" x="46" y="41" width="8" height="8"></rect><polygon class="svg-s-white" points="50,60 65,70 50,75 35,70"></polygon></svg></div>
-                          <div class="card-content">
-                            <div class="product-title">Chatbots</div>
-                            <div class="product-description">Building intelligent and efficient chatbots to streamline communication and automate tasks.</div>
-                            <div class="buy-button"><div><span>Details</span></div></div>
-                          </div>
+                        <div class="card-inner">
+                            <div class="card-front">
+                                <div class="product-image"><svg class="product-svg" viewBox="0 0 100 100"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <defs>
+                                            <pattern id="p5" patternUnits="userSpaceOnUse" width="8" height="8">
+                                                <rect class="svg-p-bg" width="8" height="8"></rect>
+                                                <rect class="svg-p-fg" width="4" height="4"></rect>
+                                                <rect class="svg-p-fg" x="4" y="4" width="4" height="4"></rect>
+                                            </pattern>
+                                        </defs>
+                                        <polygon class="svg-s-white" points="50,10 90,30 90,70 50,90 10,70 10,30"
+                                            stroke-width="3"></polygon>
+                                        <polygon class="svg-s-dark" points="50,20 80,35 80,65 50,80 20,65 20,35"
+                                            stroke-width="2"></polygon>
+                                        <rect x="35" y="35" width="30" height="30" fill="url(#p5)"></rect>
+                                        <polygon class="svg-s-white" points="50,25 70,40 50,55 30,40"></polygon>
+                                        <circle class="svg-s-accent" cx="50" cy="45" r="8"></circle>
+                                        <rect class="svg-s-white" x="46" y="41" width="8" height="8"></rect>
+                                        <polygon class="svg-s-white" points="50,60 65,70 50,75 35,70"></polygon>
+                                    </svg></div>
+                                <div class="card-content">
+                                    <div class="product-title">Optimization</div>
+                                    <div class="product-description">Meticulously identifying and resolving issues in
+                                        existing code to improve performance and stability.</div>
+                                    <div class="buy-button">
+                                        <div><span>Details</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-back">
+                                <div class="added-text">Optimization</div>
+                                <div class="added-subtext">Our Approach</div>
+                            </div>
                         </div>
-                        <div class="card-back"><div class="added-text">Chatbots</div><div class="added-subtext">Our Approach</div></div>
-                      </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-inner">
+                            <div class="card-front">
+                                <div class="product-image"><svg class="product-svg" viewBox="0 0 100 100"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <defs>
+                                            <pattern id="p6" patternUnits="userSpaceOnUse" width="8" height="8">
+                                                <rect class="svg-p-bg" width="8" height="8"></rect>
+                                                <rect class="svg-p-fg" width="4" height="4"></rect>
+                                                <rect class="svg-p-fg" x="4" y="4" width="4" height="4"></rect>
+                                            </pattern>
+                                        </defs>
+                                        <polygon class="svg-s-white" points="50,10 90,30 90,70 50,90 10,70 10,30"
+                                            stroke-width="3"></polygon>
+                                        <polygon class="svg-s-dark" points="50,20 80,35 80,65 50,80 20,65 20,35"
+                                            stroke-width="2"></polygon>
+                                        <rect x="35" y="35" width="30" height="30" fill="url(#p6)"></rect>
+                                        <polygon class="svg-s-white" points="50,25 70,40 50,55 30,40"></polygon>
+                                        <circle class="svg-s-accent" cx="50" cy="45" r="8"></circle>
+                                        <rect class="svg-s-white" x="46" y="41" width="8" height="8"></rect>
+                                        <polygon class="svg-s-white" points="50,60 65,70 50,75 35,70"></polygon>
+                                    </svg></div>
+                                <div class="card-content">
+                                    <div class="product-title">Animation</div>
+                                    <div class="product-description">Integrating stunning 2D/3D visuals and animations
+                                        to enhance the aesthetic appeal and user engagement.</div>
+                                    <div class="buy-button">
+                                        <div><span>Details</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-back">
+                                <div class="added-text">Animation</div>
+                                <div class="added-subtext">Our Approach</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-inner">
+                            <div class="card-front">
+                                <div class="product-image"><svg class="product-svg" viewBox="0 0 100 100"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <defs>
+                                            <pattern id="p7" patternUnits="userSpaceOnUse" width="8" height="8">
+                                                <rect class="svg-p-bg" width="8" height="8"></rect>
+                                                <rect class="svg-p-fg" width="4" height="4"></rect>
+                                                <rect class="svg-p-fg" x="4" y="4" width="4" height="4"></rect>
+                                            </pattern>
+                                        </defs>
+                                        <polygon class="svg-s-white" points="50,10 90,30 90,70 50,90 10,70 10,30"
+                                            stroke-width="3"></polygon>
+                                        <polygon class="svg-s-dark" points="50,20 80,35 80,65 50,80 20,65 20,35"
+                                            stroke-width="2"></polygon>
+                                        <rect x="35" y="35" width="30" height="30" fill="url(#p7)"></rect>
+                                        <polygon class="svg-s-white" points="50,25 70,40 50,55 30,40"></polygon>
+                                        <circle class="svg-s-accent" cx="50" cy="45" r="8"></circle>
+                                        <rect class="svg-s-white" x="46" y="41" width="8" height="8"></rect>
+                                        <polygon class="svg-s-white" points="50,60 65,70 50,75 35,70"></polygon>
+                                    </svg></div>
+                                <div class="card-content">
+                                    <div class="product-title">Chatbots</div>
+                                    <div class="product-description">Building intelligent and efficient chatbots to
+                                        streamline communication and automate tasks.</div>
+                                    <div class="buy-button">
+                                        <div><span>Details</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-back">
+                                <div class="added-text">Chatbots</div>
+                                <div class="added-subtext">Our Approach</div>
+                            </div>
+                        </div>
                     </div>
 
                 </div>
             </div>
         </section>
+        <!-- From Uiverse.io by D3OXY -->
+        <form action="" class="form">
+            <p>
+                Welcome,<span>Lets work together</span>
+            </p>
 
+
+            <input type="text" placeholder="name" name="name">
+            <input type="email" placeholder="Email" name="email">
+
+            <input type="text" placeholder="tell us about your project" name="whatsapp">
+            <button class="oauthButton">
+                Continue
+                <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="m6 17 5-5-5-5"></path>
+                    <path d="m13 17 5-5-5-5"></path>
+                </svg>
+            </button>
+        </form>
     </main>
+
 
     <footer>
         <div class="container">
@@ -694,14 +1162,14 @@ nav.mobile-nav-active a {
 
     <script>
         // --- Mobile Menu Toggle ---
-const menuButton = document.querySelector('.mobile-menu-button');
-const nav = document.querySelector('nav');
+        const menuButton = document.querySelector('.mobile-menu-button');
+        const nav = document.querySelector('nav');
 
-if (menuButton && nav) {
-    menuButton.addEventListener('click', () => {
-        nav.classList.toggle('mobile-nav-active');
-    });
-}
+        if (menuButton && nav) {
+            menuButton.addEventListener('click', () => {
+                nav.classList.toggle('mobile-nav-active');
+            });
+        }
         // --- Bug Animation Script ---
         const bugContainer = document.getElementById('bug-container');
         const canvas = document.getElementById('bug-lines-canvas');
@@ -776,4 +1244,5 @@ if (menuButton && nav) {
         }
     </script>
 </body>
+
 </html>
