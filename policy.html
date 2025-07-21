@@ -1,0 +1,1311 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BugFreeSociety - Legal Policies</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --dark-navy: #1A2C5B;
+            --primary-blue: #4263EB;
+            --accent-gold: #F5B841;
+            --light-cream: #FDFBF6;
+            --white: #FFFFFF;
+            --gray: #6B7280;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--light-cream);
+            color: var(--dark-navy);
+            line-height: 1.7;
+            margin: 0;
+            padding: 0;
+        }
+
+        .containerr {
+            max-width: 900px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background-color: var(--white);
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        }
+
+        header {
+            background-color: var(--dark-navy);
+            padding: 1rem 0;
+            text-align: center;
+        }
+
+        .logo {
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: var(--white);
+            text-decoration: none;
+        }
+
+        h1,
+        h2 {
+            font-weight: 700;
+            color: var(--dark-navy);
+            border-bottom: 2px solid var(--primary-blue);
+            padding-bottom: 0.5rem;
+            margin-top: 2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        h1 {
+            font-size: 2rem;
+            text-align: center;
+        }
+
+        h2 {
+            font-size: 1.4rem;
+        }
+
+        p {
+            margin-bottom: 1rem;
+        }
+
+        ul {
+            list-style-type: disc;
+            padding-left: 20px;
+            margin-bottom: 1.5rem;
+        }
+
+        li {
+            margin-bottom: 0.75rem;
+        }
+        
+        strong {
+            font-weight: 600;
+            color: var(--dark-navy);
+        }
+
+        em {
+            font-style: italic;
+            color: var(--gray);
+        }
+
+        footer {
+            background-color: var(--dark-navy);
+            padding: 2rem 0;
+            text-align: center;
+            color: var(--light-cream);
+            margin-top: 3rem;
+        }
+          :root {
+            --dark-navy: #1A2C5B;
+            --primary-blue: #4263EB;
+            --accent-gold: #F5B841;
+            --light-cream: #FDFBF6;
+            --white: #FFFFFF;
+            --gray: #6B7280;
+        }
+        .golden-line-gradient {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin: 30px 0;
+}
+
+/* Creates a gradient line for a shiny effect */
+.golden-line-gradient::before,
+.golden-line-gradient::after {
+  content: '';
+  flex: 1;
+  height: 3px; /* A slightly thicker line */
+  background: linear-gradient(to right, #BF953F, #FCF6BA, #B38728, #FBF5B7, #AA771C);
+}
+
+.golden-text {
+  padding: 0 20px;
+  font-size: 1.8em;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  
+  /* Creates a gradient effect for the text itself */
+  background: -webkit-linear-gradient(45deg, #BF953F, #FCF6BA, #AA771C);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+        /* --- Reset & Basic Styles --- */
+        body,
+        h1,
+        h2,
+        h3,
+        p,
+        a,
+        div,
+        svg {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--white);
+            color: var(--dark-navy);
+            line-height: 1.6;
+            cursor: crosshair;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1280px;
+            margin-left: auto;
+            margin-right: auto;
+            padding-left: 1.5rem;
+            padding-right: 1.5rem;
+        }
+
+        /* --- Header Section --- */
+        header {
+            background-color: var(--white);
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--dark-navy);
+            display: flex;
+            align-items: center;
+        }
+
+        .ticker-wrap {
+            width: 100%;
+            overflow: hidden;
+            background: linear-gradient(90deg, #4f46e5, #8b5cf6);
+            /* A nice gradient */
+            padding: 1rem 0;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            border-radius: 0.5rem;
+        }
+
+        /*
+         * The container for the text that will be animated.
+         * - 'display: inline-block' allows it to be a block-level element that flows with text.
+         * - 'white-space: nowrap' prevents the text content from ever wrapping to a new line.
+         * - The 'animation' property applies our keyframe animation.
+         */
+        .ticker {
+            display: inline-block;
+            white-space: nowrap;
+            /* Animation properties: name, duration, timing-function, iteration-count */
+            animation: ticker-scroll 25s linear infinite;
+        }
+
+        /*
+         * Styling for the text elements themselves.
+         */
+        .ticker-item {
+            display: inline-block;
+            padding: 0 2rem;
+            font-size: 1.25rem;
+            font-weight: bold;
+            color: white;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+
+        /* * Optional: Pause the animation when the user hovers over it.
+         */
+        .ticker-wrap:hover .ticker {
+            animation-play-state: paused;
+        }
+
+        /*
+         * The Keyframes Animation
+         * - We define an animation named 'ticker-scroll'.
+         * - It moves the '.ticker' element horizontally from its starting position (0%)
+         * to a position shifted to the left by 50% of its own width.
+         * - Since the text content inside is duplicated, moving by 50% brings the
+         * second copy perfectly into the position where the first one started,
+         * creating a seamless, infinite loop.
+         */
+        @keyframes ticker-scroll {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+
+        nav a {
+            color: var(--gray);
+            text-decoration: none;
+            transition: color 0.3s;
+            margin-left: 2rem;
+            font-weight: 500;
+        }
+
+        nav a:hover {
+            color: var(--primary-blue);
+        }
+
+        .mobile-menu-button {
+            display: none;
+        }
+
+        /* --- Hero Section --- */
+        .hero-section {
+            background-color: var(--white);
+            text-align: center;
+            padding-top: 5rem;
+            padding-bottom: 5rem;
+        }
+
+        .hero-heading {
+            font-size: 3.75rem;
+            font-weight: 800;
+            color: var(--dark-navy);
+            line-height: 1.2;
+            margin-bottom: 1rem;
+        }
+
+        .hero-subheading {
+            font-size: 1.25rem;
+            color: var(--gray);
+            max-width: 42rem;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 2rem;
+        }
+
+        .hero-avatar {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.75rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .hero-avatar img {
+            width: 5rem;
+            height: 5rem;
+            border-radius: 9999px;
+            object-fit: cover;
+            border: 2px solid var(--primary-blue);
+        }
+
+        .hero-avatar span {
+            font-weight: 600;
+            color: var(--dark-navy);
+        }
+
+        .hero-buttons {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .btn {
+            text-decoration: none;
+            font-weight: 600;
+            padding: 0.75rem 1.75rem;
+            border-radius: 0.5rem;
+            transition: all 0.3s;
+            border: 2px solid transparent;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(26, 44, 91, 0.15);
+        }
+
+        .btn-primary {
+            background-color: var(--dark-navy);
+            color: var(--white);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--primary-blue);
+        }
+
+        .btn-secondary {
+            background-color: var(--white);
+            color: var(--primary-blue);
+            border-color: var(--primary-blue);
+        }
+
+        .btn-secondary:hover {
+            background-color: var(--primary-blue);
+            color: var(--white);
+        }
+
+        /* --- About Us Section --- */
+        .about-section {
+            background-color: var(--light-cream);
+            padding-top: 5rem;
+            padding-bottom: 5rem;
+        }
+
+        .about-title {
+            font-size: 2.25rem;
+            font-weight: 700;
+            text-align: center;
+            color: var(--dark-navy);
+            margin-bottom: 3rem;
+        }
+
+        .about-content {
+            max-width: 56rem;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+            color: var(--gray);
+            font-size: 1.125rem;
+            line-height: 1.75;
+        }
+
+        .about-content p {
+            margin-bottom: 1.5rem;
+        }
+
+        .about-content p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* --- Footer Section --- */
+        footer {
+            background-color: var(--dark-navy);
+            padding: 2rem 0;
+            text-align: center;
+            color: var(--light-cream);
+            border-top: 1px solid #e5e7eb;
+        }
+
+        /* --- Bug & Connection Styles --- */
+        .bug {
+            position: absolute;
+            z-index: 0;
+            pointer-events: auto;
+            cursor: pointer;
+            transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+        }
+
+        #bug-lines-canvas {
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 9998;
+            pointer-events: none;
+        }
+
+        /* --- Services Section Layout --- */
+        .services-section {
+            padding-top: 5rem;
+            padding-bottom: 5rem;
+            background-color: var(--white);
+        }
+
+        .services-title {
+            font-size: 2.25rem;
+            font-weight: 700;
+            text-align: center;
+            color: var(--dark-navy);
+            margin-bottom: 3rem;
+        }
+
+        .services-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 4rem;
+            padding: 1rem;
+        }
+
+        /* --- Styles for Themed Card --- */
+        .card {
+            width: 280px;
+            height: 380px;
+            background: var(--white);
+            border: 4px solid var(--dark-navy);
+            position: relative;
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            overflow: hidden;
+            transform-style: preserve-3d;
+            perspective: 1000px;
+        }
+
+        .card-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            transition: transform 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            transform-style: preserve-3d;
+        }
+
+        .card-inner.is-flipped {
+    transform: rotateY(180deg);
+}
+
+        .card-front,
+        .card-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            background: var(--white);
+              transform: translateZ(0);
+        }
+    video{
+        width: 100%;
+        height:360px;
+        z-index: 10;
+   
+            object-fit: contain;
+    }
+
+        .card-front {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            background: var(--white);
+            color: var(--dark-navy);
+            border: 8px solid var(--dark-navy);
+            box-sizing: border-box;
+    }
+
+        .card-back {
+            transform: rotateY(180deg);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            background: var(--dark-navy);
+            color: var(--white);
+            border: 8px solid var(--white);
+            box-sizing: border-box;
+        }
+
+        .added-text {
+            font-size: 24px;
+            font-weight: 900;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            animation: added-glitch 2s ease-out;
+        }
+
+        .added-subtext {
+            font-size: 14px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            opacity: 0.8;
+        }
+
+        .card::after {
+            content: "";
+            position: absolute;
+            top: -100%;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(90deg,
+                    transparent,
+                    var(--accent-gold) 30%,
+                    var(--accent-gold) 70%,
+                    transparent);
+            box-shadow:
+                0 0 8px var(--accent-gold),
+                0 0 16px var(--accent-gold),
+                0 0 24px rgba(245, 184, 65, 0.8);
+            opacity: 0.6;
+            z-index: 10;
+            animation: scanline 4s linear infinite;
+        }
+
+        .card:hover::after {
+            opacity: 1;
+            animation: scanline-fast 1.2s linear infinite;
+        }
+
+        .card:hover {
+            transform: rotate(-3deg) scale(1.05) skew(-1deg);
+            box-shadow: 10px 10px 0 var(--primary-blue);
+            border-width: 4px;
+            border-color: var(--primary-blue);
+        }
+
+        .product-image {
+            width: 100%;
+            height: 150px;
+            background: var(--dark-navy);
+            position: relative;
+            border-bottom: 8px solid var(--dark-navy);
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .product-svg {
+            width: 80px;
+            height: 80px;
+            transition: all 0.3s ease;
+        }
+
+        /* --- NEW: SVG Color Styling --- */
+        .product-svg .svg-p-bg {
+            fill: var(--white);
+        }
+
+        .product-svg .svg-p-fg {
+            fill: var(--dark-navy);
+        }
+
+        .product-svg .svg-s-white {
+            fill: var(--white);
+            stroke: var(--white);
+        }
+
+        .product-svg .svg-s-dark {
+            fill: var(--dark-navy);
+            stroke: var(--white);
+        }
+
+        .product-svg .svg-s-accent {
+            fill: var(--primary-blue);
+        }
+
+        .product-svg .svg-s-accent-stroke {
+            stroke: var(--primary-blue);
+            fill: none;
+        }
+
+        .card:hover .product-svg {
+            animation:
+                brutal-spin 0.4s ease-in-out,
+                svg-glitch 0.6s ease-in-out;
+            transform: scale(1.2);
+        }
+
+        .card-content {
+            padding: 16px;
+            position: relative;
+            z-index: 2;
+            background: var(--white);
+            height: calc(100% - 158px);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .product-title {
+            font-size: 16px;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 6px;
+            border-bottom: 4px solid var(--dark-navy);
+            color: var(--dark-navy);
+            padding-bottom: 2px;
+            line-height: 1.1;
+        }
+
+        .product-description {
+            font-family: 'Inter', sans-serif;
+            color: var(--gray);
+            font-size: 13px;
+            line-height: 1.5;
+            text-transform: none;
+            letter-spacing: 0;
+            margin-top: 8px;
+            margin-bottom: 12px;
+            flex-grow: 1;
+        }
+
+        .buy-button {
+            width: 100%;
+            padding: 10px;
+            background: var(--dark-navy);
+            color: var(--white);
+            border: 4px solid var(--dark-navy);
+            font-family: "Helvitica", monospace;
+            text-align: center;
+            font-size: 14px;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            position: relative;
+            overflow: hidden;
+            margin-top: auto;
+        }
+
+        .buy-button::before {
+            content: "DETAILS";
+            position: absolute;
+            top: 10px;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: var(--primary-blue);
+            transition: all 0.3s ease;
+        }
+
+        .card:hover .buy-button::before {
+            left: 0;
+        }
+
+        .card:hover .buy-button {
+            color: var(--white);
+        }
+
+        .card:hover .buy-button span {
+            position: relative;
+            z-index: 1;
+        }
+
+        /* --- Responsive Design --- */
+        @media (max-width: 768px) {
+            nav {
+                display: none;
+            }
+
+            .mobile-menu-button {
+                display: block;
+                z-index: 3;
+            }
+
+            .hero-heading {
+                font-size: 2.5rem;
+            }
+
+            .hero-subheading {
+                font-size: 1rem;
+            }
+
+            .about-title,
+            .services-title {
+                font-size: 1.875rem;
+            }
+
+            .about-content {
+                font-size: 1rem;
+                text-align: left;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+                gap: 0.75rem;
+            }
+        }
+
+        @keyframes added-glitch {
+            0% {
+                transform: scale(0.8);
+                filter: invert(0);
+                opacity: 0;
+            }
+
+            10% {
+                transform: scale(1.2) skew(-5deg);
+                filter: invert(1);
+                opacity: 1;
+            }
+
+            20% {
+                transform: scale(0.9) skew(3deg);
+                filter: invert(0);
+            }
+
+            30% {
+                transform: scale(1.1) skew(-2deg);
+                filter: invert(1);
+            }
+
+            40% {
+                transform: scale(1) skew(1deg);
+                filter: invert(0);
+            }
+
+            50% {
+                transform: scale(1.05) skew(0deg);
+                filter: invert(1);
+            }
+
+            70% {
+                transform: scale(1);
+                filter: invert(0);
+            }
+
+            100% {
+                transform: scale(1);
+                filter: invert(0);
+            }
+        }
+
+        @keyframes scanline {
+            0% {
+                top: -100%;
+                opacity: 0;
+            }
+
+            3% {
+                opacity: 0.3;
+            }
+
+            97% {
+                opacity: 0.3;
+            }
+
+            100% {
+                top: 100%;
+                opacity: 0;
+            }
+        }
+
+        @keyframes scanline-fast {
+            0% {
+                top: -100%;
+                opacity: 0;
+            }
+
+            8% {
+                opacity: 1;
+            }
+
+            92% {
+                opacity: 1;
+            }
+
+            100% {
+                top: 100%;
+                opacity: 0;
+            }
+        }
+
+        @keyframes brutal-spin {
+            0% {
+                transform: scale(1.2) rotate(0deg);
+            }
+
+            25% {
+                transform: scale(1.4) rotate(90deg);
+            }
+
+            50% {
+                transform: scale(1.2) rotate(180deg);
+            }
+
+            75% {
+                transform: scale(1.4) rotate(270deg);
+            }
+
+            100% {
+                transform: scale(1.2) rotate(360deg);
+            }
+        }
+
+        @keyframes svg-glitch {
+
+            0%,
+            100% {
+                filter: invert(0);
+            }
+
+            10% {
+                filter: invert(1);
+            }
+
+            20% {
+                filter: invert(0);
+            }
+
+            30% {
+                filter: invert(1);
+            }
+
+            40% {
+                filter: invert(0);
+            }
+        }
+
+        /* Add these inside your @media (max-width: 768px) block */
+
+        nav.mobile-nav-active {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: var(--white);
+            position: absolute;
+            top: 65px;
+            /* Position it below the header */
+            left: 0;
+            width: 100%;
+            padding: 1rem 0;
+            border-bottom: 1px solid #e5e7eb;
+            z-index: 9999;
+            /* Ensure it's on top of other content */
+        }
+
+        nav.mobile-nav-active a {
+            margin: 0.75rem 0;
+            /* Add vertical spacing for links */
+            padding: 0.5rem;
+        }
+
+
+        /* DEOXY Was Here */
+        .form {
+            --input-focus: #2d8cf0;
+            --font-color: #323232;
+            --font-color-sub: var(--accent-gold);
+            --bg-color: var(--white);
+            --main-color: var(--primary-blue);
+            padding: 20px;
+            background: var(--light-cream);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            border-radius: 5px;
+            border: 2px solid var(--main-color);
+            box-shadow: 4px 4px var(--main-color);
+
+        }
+
+        .form>p {
+            font-family: var(--font-DelaGothicOne);
+            color: var(--font-color);
+            font-weight: 700;
+            font-size: 20px;
+            margin-bottom: 15px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form>p>span {
+            font-family: var(--font-SpaceMono);
+            color: var(--font-color-sub);
+            font-weight: 600;
+            font-size: 17px;
+        }
+
+        .separator {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 5px;
+        }
+
+        .separator>div {
+            width: 100px;
+            height: 3px;
+            border-radius: 5px;
+            background-color: var(--font-color-sub);
+        }
+
+        .separator>span {
+            color: var(--font-color);
+            font-family: var(--font-SpaceMono);
+            font-weight: 600;
+        }
+
+        .oauthButton {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 5px;
+            /* margin: 50px auto 0 auto; */
+            padding: auto 15px 15px auto;
+            width: 250px;
+            height: 40px;
+            border-radius: 5px;
+            border: 2px solid var(--main-color);
+            background-color: var(--bg-color);
+            box-shadow: 4px 4px var(--main-color);
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--font-color);
+            cursor: pointer;
+            transition: all 250ms;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+        }
+
+        .oauthButton::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 0;
+            background-color: #212121;
+            z-index: -1;
+            -webkit-box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+            box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+            transition: all 250ms;
+        }
+
+        .oauthButton:hover {
+            color: #e8e8e8;
+        }
+
+        .oauthButton:hover::before {
+            width: 100%;
+        }
+
+        .form>input {
+            width: 250px;
+            height: 40px;
+            border-radius: 5px;
+            border: 2px solid var(--main-color);
+            background-color: var(--bg-color);
+            box-shadow: 4px 4px var(--main-color);
+            font-size: 15px;
+            font-weight: 600;
+            color: var(--font-color);
+            padding: 5px 10px;
+            outline: none;
+        }
+
+        .icon {
+            width: 1.5rem;
+            height: 1.5rem;
+        }
+
+        .hero-image {
+            position: relative;
+            width: 350px;
+            height: 350px;
+            margin: 0 auto;
+        }
+
+
+
+        #hero-bug {
+            width: 350px;
+            height: auto;
+            max-width: 350px;
+            position: absolute;
+            top: 100vh;
+            /* Start off-screen */
+            left: -2px;
+            animation: moveUp 3s ease-out forwards;
+        }
+
+        @keyframes moveUp {
+            from {
+                top: 100vh;
+            }
+
+            to {
+                top: 70px;
+            }
+        }
+
+        #hero-logo {
+            width: 350px;
+            height: auto;
+            max-width: 350px;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+   
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="container header-content">
+            <div class="logo">
+                <img src="./full.png" style="width: 100px;" alt="BugFreeSociety Avatar">
+                BugFreeSociety
+            </div>
+            <nav style="z-index: 999;">
+                <a href="./index.html#home">Home</a>
+                <a href="./index.html#about">About</a>
+                <a href="./portfoli.html#portfolio">Portfolio</a>
+                <a href="./index.html#connect">Let's Work</a>
+                <a href="#policy">Policy</a>
+            </nav>
+            <div class="mobile-menu-button">
+                <button>
+                    <svg style="width: 1.5rem; height: 1.5rem;" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="containerr">
+            <section id="terms-of-service">
+                <h1>BUGFREESOCIETY TERMS OF SERVICE</h1>
+                <p><em>Effective Date: July 19, 2025</em></p>
+                <p>Welcome to BugFreeSociety! We are delighted to offer our software development, quality assurance, and related services. These Terms of Service ("Terms") govern your access to and use of the services provided by BugFreeSociety ("BugFreeSociety," "we," "us," or "our"). By engaging with our services, you agree to be bound by these Terms.</p>
+
+                <h2>1. Services Offered</h2>
+                <p>BugFreeSociety provides a range of software development and quality assurance services, including but not limited to:</p>
+                <ul>
+                    <li>Website Development</li>
+                    <li>Application Development (Web, Mobile, Desktop)</li>
+                    <li>Game Development</li>
+                    <li>Dashboard Development</li>
+                    <li>Code Optimization & Debugging</li>
+                    <li>2D/3D Visuals & Animation Integration</li>
+                    <li>Chatbot Development</li>
+                    <li>Software Testing & Quality Assurance (Functional, Performance, Security, Usability, Automation, Mobile App Testing)</li>
+                    <li>Consulting related to the above services.</li>
+                </ul>
+                <p>Detailed scope of work, deliverables, timelines, and specific pricing for each project will be outlined in a separate Project Proposal, Statement of Work (SOW), or Service Agreement ("Agreement") executed between BugFreeSociety and the Client ("You" or "Client").</p>
+
+                <h2>2. Client Responsibilities</h2>
+                <p>You agree to:</p>
+                <ul>
+                    <li>Provide timely and accurate information, content, feedback, and approvals required for the project.</li>
+                    <li>Designate a primary contact person for communication.</li>
+                    <li>Ensure that all materials provided to BugFreeSociety (e.g., text, images, logos, code) do not infringe upon the intellectual property rights or other rights of any third party. You grant BugFreeSociety a non-exclusive, revocable, worldwide license to use such materials solely for the purpose of performing the agreed-upon services.</li>
+                    <li>Review deliverables promptly and provide feedback within agreed-upon timelines. Delays in feedback may impact project timelines and costs.</li>
+                    <li>Make payments according to the agreed-upon schedule.</li>
+                </ul>
+                
+                <h2>3. Project Timelines and Deliverables</h2>
+                <p>Project timelines are estimates and are contingent upon timely client cooperation and unforeseen technical challenges. While we strive to adhere to agreed schedules, BugFreeSociety shall not be liable for delays caused by factors beyond our reasonable control. Deliverables will be provided as outlined in the specific Agreement.</p>
+
+                <h2>4. Payment Terms</h2>
+                <ul>
+                    <li><strong>Pricing:</strong> All pricing will be detailed in the individual Agreement.</li>
+                    <li><strong>Payment Schedule:</strong> Payments are typically structured as upfront deposits, milestone payments, and/or final payments. Specific percentages and due dates will be clearly outlined in your Agreement.</li>
+                    <li><strong>Invoicing:</strong> Invoices will be issued according to the agreed payment schedule.</li>
+                    <li><strong>Late Payments:</strong> Payments not received by the due date may be subject to a late fee of <em>[e.g., 2% per month or EGP [Amount] per week]</em> on the outstanding balance. BugFreeSociety reserves the right to suspend work on any project until outstanding payments are settled.</li>
+                    <li><strong>Taxes:</strong> All prices are exclusive of any applicable taxes (e.g., VAT, sales tax) unless otherwise stated. Such taxes will be added to the invoice where legally required.</li>
+                </ul>
+
+                <h2>5. Intellectual Property Rights</h2>
+                <ul>
+                    <li><strong>Client Materials:</strong> All intellectual property rights in any materials provided by you to BugFreeSociety shall remain your sole property.</li>
+                    <li><strong>BugFreeSociety Tools & Pre-existing IP:</strong> BugFreeSociety retains all intellectual property rights in its proprietary tools, methodologies, pre-existing code libraries, and generic solutions that may be used in the development of your project. These are licensed to you on a non-exclusive, perpetual, worldwide basis solely for the operation of the delivered project.</li>
+                    <li><strong>Project Deliverables:</strong> Upon full and final payment for the project, and subject to the terms herein, BugFreeSociety will assign to you all intellectual property rights in the custom-developed elements of the final deliverables specifically created for your project (e.g., custom code, unique design elements), excluding any third-party components or BugFreeSociety's pre-existing IP.</li>
+                    <li><strong>Open Source:</strong> Where open-source components are used, they will be subject to their respective licenses. BugFreeSociety will endeavor to inform you of such usage where significant.</li>
+                </ul>
+
+                <h2>6. Revisions and Scope Changes</h2>
+                <ul>
+                    <li><strong>Agreed Revisions:</strong> The number of revisions included in each project phase will be specified in the Agreement.</li>
+                    <li><strong>Scope Changes:</strong> Any work requested outside the agreed-upon scope, deliverables, or revisions will be considered a "Change Request." Change Requests must be submitted in writing, and if approved by both parties, will result in an amendment to the Agreement, potentially affecting project timelines and additional costs.</li>
+                </ul>
+
+                <h2>7. Warranty and Bug Fixing</h2>
+                <ul>
+                    <li><strong>Warranty Period:</strong> BugFreeSociety provides a limited warranty period of <em>[e.g., 30 days / 60 days / 90 days]</em> from the date of final project delivery (or acceptance, if applicable) for the custom code and features explicitly outlined in the Agreement.</li>
+                    <li><strong>What's Covered:</strong> During this period, we will rectify any bugs or defects directly attributable to our coding errors, free of charge.</li>
+                    <li><strong>What's Not Covered:</strong> This warranty does not cover issues arising from:
+                        <ul>
+                            <li>Client modifications to the code or environment after delivery.</li>
+                            <li>Third-party software, plugins, or services not provided or controlled by BugFreeSociety.</li>
+                            <li>Server or hosting environment issues not managed by BugFreeSociety.</li>
+                            <li>Browser or device compatibility issues not explicitly agreed upon.</li>
+                            <li>Changes in external APIs or services used by the project.</li>
+                            <li>New features or changes in functionality not part of the original scope.</li>
+                        </ul>
+                    </li>
+                    <li><strong>Reporting Bugs:</strong> Bugs must be reported in writing within the warranty period, providing clear steps to reproduce the issue.</li>
+                </ul>
+
+                <h2>8. Confidentiality</h2>
+                <p>Both parties agree to keep confidential all non-public information shared by the other party during the course of the engagement, except as required by law or with the express written consent of the disclosing party. This obligation survives the termination of these Terms.</p>
+
+                <h2>9. Limitation of Liability</h2>
+                <p>To the maximum extent permitted by law, BugFreeSociety shall not be liable for any indirect, incidental, special, consequential, or punitive damages, or any loss of profits or revenues, whether incurred directly or indirectly, or any loss of data, use, goodwill, or other intangible losses, resulting from (a) your use or inability to use the services; (b) any unauthorized access to or use of our servers and/or any personal information stored therein; (c) any interruption or cessation of transmission to or from our services; (d) any bugs, viruses, Trojan horses, or the like that may be transmitted to or through our services by any third party; (e) any errors or omissions in any content or for any loss or damage incurred as a result of your use of any content posted, emailed, transmitted, or otherwise made available through the services; and/or (f) the defamatory, offensive, or illegal conduct of any third party. In no event shall BugFreeSociety's aggregate liability for all claims relating to the services exceed the amount paid by you to BugFreeSociety for the specific project in question during the six (6) months prior to the event giving rise to the liability.</p>
+
+                <h2>10. Indemnification</h2>
+                <p>You agree to defend, indemnify, and hold harmless BugFreeSociety, its affiliates, licensors, and service providers, and its and their respective officers, directors, employees, contractors, agents, licensors, suppliers, successors, and assigns from and against any claims, liabilities, damages, judgments, awards, losses, costs, expenses, or fees (including reasonable attorneys' fees) arising out of or relating to your violation of these Terms or your use of the services, including, but not limited to, your User Contributions, any use of the Service's content, services, and products other than as expressly authorized in these Terms, or your use of any information obtained from the Service.</p>
+
+                <h2>11. Termination</h2>
+                <p>Either party may terminate an Agreement or these Terms with written notice if the other party breaches any material term herein and fails to remedy such breach within <em>[e.g., 15]</em> days of receiving written notice. In the event of termination by the Client without cause, or by BugFreeSociety due to Client's breach, all outstanding payments for work completed up to the date of termination shall become immediately due and payable.</p>
+
+                <h2>12. Governing Law & Dispute Resolution</h2>
+                <p>These Terms and any dispute or claim arising out of or in connection with them or their subject matter or formation (including non-contractual disputes or claims) shall be governed by and construed in accordance with the laws of <strong>Egypt</strong>.</p>
+                <p>Any dispute, controversy, or claim arising out of or relating to these Terms, or the breach, termination, or invalidity thereof, shall be finally settled by arbitration in accordance with the rules of <em>[Specify Arbitration Center, e.g., Cairo Regional Centre for International Commercial Arbitration (CRCICA) or simply state "the competent courts of Cairo, Egypt"]</em>. The language of the arbitration shall be Arabic/English.</p>
+
+                <h2>13. Miscellaneous</h2>
+                <ul>
+                    <li><strong>Entire Agreement:</strong> These Terms, together with any executed Agreement, constitute the entire agreement between you and BugFreeSociety regarding the services.</li>
+                    <li><strong>Severability:</strong> If any provision of these Terms is found to be unlawful, void, or for any reason unenforceable, then that provision shall be deemed severable from these Terms and shall not affect the validity and enforceability of any remaining provisions.</li>
+                    <li><strong>Waiver:</strong> No waiver by BugFreeSociety of any term or condition set out in these Terms shall be deemed a further or continuing waiver of such term or condition or a waiver of any other term or condition, and any failure of BugFreeSociety to assert a right or provision under these Terms shall not constitute a waiver of such right or provision.</li>
+                    <li><strong>Changes to Terms:</strong> BugFreeSociety reserves the right to revise and update these Terms from time to time in our sole discretion. All changes are effective immediately when we post them and apply to all access to and use of the services thereafter. Your continued use of the services following the posting of revised Terms means that you accept and agree to the changes.</li>
+                </ul>
+
+                <h2>Contact Information:</h2>
+                <p>For any questions about these Terms, please contact us at:<br>
+                <em> nobugsociety@gmail.com </em>
+            </section>
+
+            <section id="privacy-policy">
+                <h1>BUGFREESOCIETY PRIVACY POLICY</h1>
+                <p><em>Effective Date: July 19, 2025</em></p>
+                <p>BugFreeSociety ("BugFreeSociety," "we," "us," or "our") is committed to protecting the privacy of your personal information. This Privacy Policy describes how we collect, use, and share information when you engage with our services, visit our website, or communicate with us.</p>
+                
+                <h2>1. Information We Collect</h2>
+                <p>We collect various types of information in connection with our services, including:</p>
+                <ul>
+                    <li><strong>Information You Provide Directly:</strong>
+                        <ul>
+                            <li><em>Contact Information:</em> Name, email address, phone number, company name, postal address when you inquire about our services, request a quote, or sign an agreement.</li>
+                            <li><em>Project-Related Information:</em> Details about your project requirements, specifications, content (text, images, data), access credentials to systems (e.g., development servers, APIs, if necessary for the project and provided by you), and any other information you provide to facilitate the delivery of our services.</li>
+                            <li><em>Financial Information:</em> Payment details (e.g., bank account information for invoicing purposes, though we generally use secure third-party payment processors and do not store sensitive credit card information).</li>
+                            <li><em>Communication Data:</em> Records of your correspondence with us (e.g., emails, chat logs, meeting notes).</li>
+                        </ul>
+                    </li>
+                    <li><strong>Information We Collect Automatically (Website Usage):</strong>
+                        <ul>
+                            <li><em>Log Data:</em> IP address, browser type, operating system, referring URLs, pages viewed, and timestamps.</li>
+                            <li><em>Cookies and Similar Technologies:</em> We use cookies to track website usage, improve user experience, and gather analytics. (See Section 5 for more details on Cookies).</li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <h2>2. How We Use Your Information</h2>
+                <p>We use the information we collect for the following purposes:</p>
+                <ul>
+                    <li><strong>To Provide and Manage Our Services:</strong> To understand your project requirements, develop, test, and deliver the agreed-upon software solutions, communicate project progress, and manage our business relationship.</li>
+                    <li><strong>To Process Payments:</strong> To invoice you for our services and manage financial transactions.</li>
+                    <li><strong>To Communicate with You:</strong> To respond to your inquiries, provide customer support, send important notices, updates, and project-related communications.</li>
+                    <li><strong>For Internal Operations:</strong> For internal record-keeping, data analysis, research, and to improve our services and website.</li>
+                    <li><strong>For Marketing and Promotion (with consent):</strong> To send you information about our services, promotions, and news that we believe may be of interest to you. You can opt-out of these communications at any time.</li>
+                    <li><strong>To Comply with Legal Obligations:</strong> To meet legal, regulatory, or compliance requirements.</li>
+                    <li><strong>To Protect Our Rights:</strong> To protect the rights, property, or safety of BugFreeSociety, our clients, or others.</li>
+                </ul>
+
+                <h2>3. How We Share Your Information</h2>
+                <p>We do not sell, rent, or trade your personal information to third parties. We may share your information in the following circumstances:</p>
+                <ul>
+                    <li><strong>With Service Providers:</strong> We may share information with trusted third-party service providers who perform services on our behalf, such as payment processors, cloud hosting providers, project management tools, and analytics providers. These providers are obligated to protect your information and use it only for the purposes for which it was disclosed.</li>
+                    <li><strong>With Subcontractors (Project Specific):</strong> For certain projects, we may engage trusted and vetted subcontractors. We ensure they are bound by confidentiality obligations consistent with this Privacy Policy.</li>
+                    <li><strong>For Legal Reasons:</strong> We may disclose your information if required to do so by law or in response to valid requests by public authorities (e.g., a court order or government agency request).</li>
+                    <li><strong>Business Transfers:</strong> In the event of a merger, acquisition, or sale of all or a portion of our assets, your information may be transferred as part of that transaction.</li>
+                    <li><strong>With Your Consent:</strong> We may share your information with third parties when we have your explicit consent to do so.</li>
+                </ul>
+
+                <h2>4. Data Security</h2>
+                <p>We implement reasonable technical and organizational measures designed to protect your personal information from unauthorized access, use, alteration, or destruction. However, no data transmission over the internet or electronic storage system can be guaranteed to be 100% secure. While we strive to protect your personal information, we cannot guarantee its absolute security.</p>
+
+                <h2>5. Cookies and Tracking Technologies</h2>
+                <p>Our website uses "cookies" and similar tracking technologies to enhance your Browse experience, analyze site usage, and improve our services.</p>
+                <ul>
+                    <li><strong>What are Cookies?</strong> Cookies are small text files placed on your device.</li>
+                    <li><strong>How We Use Them:</strong> We use cookies for:
+                        <ul>
+                            <li><em>Essential functionality:</em> To make our website work correctly.</li>
+                            <li><em>Analytics:</em> To understand how visitors use our website (e.g., Google Analytics).</li>
+                            <li><em>Preferences:</em> To remember your settings and preferences.</li>
+                        </ul>
+                    </li>
+                    <li><strong>Your Choices:</strong> Most web browsers allow you to control cookies through their settings. You can typically set your browser to refuse all or some browser cookies, or to alert you when cookies are being sent. However, if you disable or refuse cookies, please note that some parts of this site may then be inaccessible or not function properly.</li>
+                </ul>
+                
+                <h2>6. Data Retention</h2>
+                <p>We retain your personal information for as long as necessary to fulfill the purposes for which it was collected, including for the purposes of satisfying any legal, accounting, or reporting requirements.</p>
+
+                <h2>7. Your Rights</h2>
+                <p>Depending on your jurisdiction, you may have certain rights regarding your personal information, including the right to:</p>
+                <ul>
+                    <li>Access your personal data.</li>
+                    <li>Request correction of inaccurate data.</li>
+                    <li>Request deletion of your data (subject to legal exceptions).</li>
+                    <li>Object to processing of your data.</li>
+                    <li>Request restriction of processing.</li>
+                    <li>Request data portability.</li>
+                    <li>Withdraw consent (where processing is based on consent).</li>
+                </ul>
+                <p>To exercise any of these rights, please contact us using the contact information below. We may need to verify your identity before fulfilling your request.</p>
+
+                <h2>8. Third-Party Websites</h2>
+                <p>Our website may contain links to third-party websites. This Privacy Policy does not apply to those websites. We encourage you to review the privacy policies of any third-party websites you visit.</p>
+
+                <h2>9. Changes to This Privacy Policy</h2>
+                <p>We may update this Privacy Policy from time to time. The "Effective Date" at the top of this page indicates when this Policy was last revised. We encourage you to review this Policy periodically for any changes. Your continued use of our services after any changes indicates your acceptance of the updated Privacy Policy.</p>
+
+                <h2>10. Contact Us</h2>
+                <p>If you have any questions about this Privacy Policy or our data practices, please contact us:<br>
+                <em> nobugsociety@gmail.com </em>
+            </section>
+
+            <section id="refund-policy">
+                <h1>BUGFREESOCIETY REFUND & CANCELLATION POLICY</h1>
+                <p><em>Effective Date: July 19, 2025</em></p>
+                <p>This Refund & Cancellation Policy outlines the conditions under which refunds may be issued and how project cancellations are handled for services provided by BugFreeSociety ("BugFreeSociety," "we," "us," or "our").</p>
+
+                <h2>1. Project Commencement and Initial Payments</h2>
+                <ul>
+                    <li><strong>Deposit/Upfront Payment:</strong> For most projects, an initial deposit or upfront payment is required to commence work. This payment covers initial project setup, resource allocation, research, and preliminary design/development efforts. This deposit is generally <strong>non-refundable</strong> once work has commenced.</li>
+                    <li><strong>Work Commencement:</strong> Work is considered commenced upon receipt of the initial payment and the formal start of project activities as defined in the signed Project Proposal or Statement of Work (SOW).</li>
+                </ul>
+
+                <h2>2. Refund Eligibility</h2>
+                <p>Refunds are generally not provided for work already performed or services already delivered. Eligibility for a partial refund may be considered under the following specific circumstances:</p>
+                <ul>
+                    <li><strong>BugFreeSociety Failure to Deliver:</strong> If BugFreeSociety fails to deliver a project or a significant milestone as outlined in the signed Agreement, and this failure is directly attributable to BugFreeSociety's actions or inaction, and all reasonable attempts to rectify the situation have failed. In such cases, the refund will be pro-rated based on the undelivered portion of the service, less any costs incurred by BugFreeSociety.</li>
+                    <li><strong>Pre-Commencement Cancellation:</strong> If a client cancels a project after signing the Agreement but before any work has officially commenced and before any significant resources have been allocated, a refund of any initial deposit may be considered, subject to an administrative fee of <em>[e.g., 10% of the deposit or a fixed amount like EGP [Amount]]</em>.</li>
+                </ul>
+                
+                <h2>3. Non-Refundable Situations</h2>
+                <p>Refunds will generally NOT be provided in the following situations:</p>
+                <ul>
+                    <li>Change of Mind: If the client changes their mind or decides to pursue an alternative solution after work has commenced.</li>
+                    <li>Client Delay/Non-Cooperation: Delays or inability to complete the project due to the client's failure to provide timely feedback, content, approvals, or necessary access.</li>
+                    <li>Scope Changes: Any additional costs incurred due to changes in project scope requested by the client after the initial agreement.</li>
+                    <li>Third-Party Costs: Costs for third-party licenses, themes, plugins, hosting, or other services purchased on behalf of the client (unless the vendor provides a refund to BugFreeSociety).</li>
+                    <li>Issues Outside BugFreeSociety's Control: Problems arising from client-provided code, hosting environments not managed by BugFreeSociety, third-party software, or other factors outside our direct control.</li>
+                    <li>Post-Acceptance Issues: Issues reported after the agreed-upon warranty period has expired.</li>
+                    <li>Termination for Cause by BugFreeSociety: If the project is terminated by BugFreeSociety due to the client's breach of contract (e.g., non-payment, intellectual property infringement, consistent non-cooperation). In such cases, all outstanding payments for work completed up to the termination date will become immediately due.</li>
+                </ul>
+                
+                <h2>4. Project Cancellation and Termination</h2>
+                <ul>
+                    <li><strong>Cancellation by Client:</strong> If the client wishes to cancel a project, written notice must be provided to BugFreeSociety. The client will be invoiced for all work completed up to the date of cancellation, based on the agreed-upon hourly rates or a pro-rated portion of the fixed project fee, less any initial deposit already paid. Any outstanding balance will be due immediately.</li>
+                    <li><strong>Termination by BugFreeSociety:</strong> BugFreeSociety reserves the right to terminate a project if the client consistently fails to meet their responsibilities as outlined in the Terms of Service, including but not limited to, non-payment, excessive delays in providing feedback, or unethical conduct. In such cases, the client will be invoiced for all work completed to date, and any outstanding balance will be due immediately.</li>
+                    <li><strong>Intellectual Property upon Termination:</strong> Upon termination, and subject to full payment for all work completed, any intellectual property rights for the completed portions of the project developed specifically for the client will be transferred, as per the Terms of Service. If full payment is not received, BugFreeSociety retains all rights to the work performed.</li>
+                </ul>
+
+                <h2>5. Process for Refund/Cancellation Request</h2>
+                <p>All requests for refunds or project cancellations must be submitted in writing via email to <em>[Your Email Address]</em>. Please include your project name, invoice number, and a detailed explanation of your request. BugFreeSociety will review your request and respond within <em>[e.g., 10-15]</em> business days.</p>
+
+                <h2>6. Changes to This Policy</h2>
+                <p>BugFreeSociety reserves the right to amend this Refund & Cancellation Policy at any time. All changes will be effective immediately upon posting. Your continued engagement with our services after any changes indicates your acceptance of the revised policy.</p>
+            </section>
+        </div>
+    </main>
+    
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 BugFreeSociety. All Rights Reserved.</p>
+        </div>
+    </footer>
+    
+</body>
+</html>
