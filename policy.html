@@ -1300,12 +1300,21 @@
             </section>
         </div>
     </main>
-    
+
     <footer>
         <div class="container">
             <p>&copy; 2025 BugFreeSociety. All Rights Reserved.</p>
         </div>
     </footer>
-    
+    <script>
+        const menuButton = document.querySelector('.mobile-menu-button');
+        const nav = document.querySelector('nav');
+
+        if (menuButton && nav) {
+            menuButton.addEventListener('click', () => {
+                nav.classList.toggle('mobile-nav-active');
+            });
+        }
+    </script>
 </body>
 </html>
