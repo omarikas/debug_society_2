@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BugFreeSociety - Legal Policies</title>
+    <title>NoBug Society - Legal Policies</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -28,12 +28,14 @@
         }
 
         .containerr {
-            max-width: 900px;
+            width: 70%;
             margin: 2rem auto;
-            padding: 2rem;
+            padding: 2rem 2.5rem;
             background-color: var(--white);
             border-radius: 8px;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            text-align: left;
+            text-align: justify;
         }
 
         header {
@@ -57,6 +59,8 @@
             padding-bottom: 0.5rem;
             margin-top: 2rem;
             margin-bottom: 1.5rem;
+            margin-left: 0;
+            margin-right: 0;
         }
 
         h1 {
@@ -70,16 +74,22 @@
 
         p {
             margin-bottom: 1rem;
+            margin-left: 0;
+            margin-right: 0;
         }
 
         ul {
             list-style-type: disc;
-            padding-left: 20px;
+            padding-left: 1.5rem;
             margin-bottom: 1.5rem;
+            margin-left: 0;
+            margin-right: 0;
         }
 
         li {
             margin-bottom: 0.75rem;
+            margin-left: 0;
+            margin-right: 0;
         }
         
         strong {
@@ -1031,16 +1041,186 @@
             left: 0;
         }
    
+        .theme-toggle-button {
+            background-color: transparent;
+            border: 1px solid var(--dark-navy);
+            color: var(--dark-navy);
+            border-radius: 9999px;
+            padding: 0.5rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            margin-left: auto;
+            margin-right: 1rem;
+        }
+
+        .theme-toggle-button:hover {
+            background-color: var(--dark-navy);
+            color: var(--white);
+        }
+
+        .theme-toggle-button .toggle-icon {
+            width: 1.25rem;
+            height: 1.25rem;
+        }
+
+        /* --- Dark Mode Variables & Styles --- */
+        body.dark-mode {
+            --dark-navy: #E5E7EB;
+            /* Light Gray for Text */
+            --primary-blue: #60A5FA;
+            /* Brighter Blue for accents */
+            --accent-gold: #FBBF24;
+            /* Slightly brighter gold */
+            --light-cream: #111827;
+            /* Dark BG for sections */
+            --white: #1A2C5B;
+            /* Dark BG for main body */
+            --gray: #9CA3AF;
+            /* Lighter gray for subtext */
+            cursor: default;
+        }
+        
+        body.dark-mode .logo img,
+        body.dark-mode #hero-logo,
+        body.dark-mode #hero-bug {
+           filter: invert(1) hue-rotate(180deg);
+        }
+
+        /* Specific overrides for dark mode */
+        body.dark-mode .btn-primary {
+          background-color: var(--primary-blue);
+          color: #111827;
+        }
+        
+        body.dark-mode .btn-primary:hover {
+            background-color: var(--dark-navy);
+            color: #111827;
+        }
+
+        body.dark-mode .btn-secondary {
+          background-color: transparent;
+          color: var(--primary-blue);
+          border-color: var(--primary-blue);
+        }
+
+        body.dark-mode .btn-secondary:hover {
+          background-color: var(--primary-blue);
+          color: #111827;
+        }
+
+        body.dark-mode .card {
+          background: #1F2937; /* Card BG */
+          border-color: var(--primary-blue);
+        }
+
+        body.dark-mode .card-front,
+        body.dark-mode .card-back {
+            background: #1F2937;
+            color: var(--dark-navy);
+            border-color: var(--primary-blue);
+        }
+        
+         body.dark-mode .card-back {
+            background: var(--dark-navy);
+            color: #111827;
+            border-color: var(--primary-blue);
+        }
+
+        body.dark-mode .card-content {
+          background: #1F2937;
+        }
+        
+        body.dark-mode .product-title {
+            color: var(--dark-navy);
+            border-color: var(--primary-blue);
+        }
+
+        body.dark-mode .buy-button {
+            background: var(--primary-blue);
+            color: #111827;
+            border-color: var(--primary-blue);
+        }
+        
+        body.dark-mode .product-image {
+            background: #111827;
+            border-bottom-color: var(--primary-blue);
+        }
+
+        body.dark-mode .product-svg .svg-p-bg { fill: #374151; }
+        body.dark-mode .product-svg .svg-p-fg { fill: #9CA3AF; }
+        body.dark-mode .product-svg .svg-s-white { fill: #E5E7EB; stroke: #E5E7EB; }
+        body.dark-mode .product-svg .svg-s-dark { fill: #111827; stroke: #E5E7EB; }
+        
+        body.dark-mode .bug g path { stroke: var(--primary-blue); }
+        body.dark-mode .bug g ellipse:nth-of-type(1) { fill: var(--primary-blue); }
+        body.dark-mode .bug g ellipse:nth-of-type(2) { fill: #111827; }
+        
+        body.dark-mode .form {
+            --font-color: #E5E7EB;
+            --bg-color: #1F2937;
+            --main-color: var(--primary-blue);
+            background: #111827;
+        }
+
+        body.dark-mode .form > input {
+            background-color: var(--bg-color);
+            border-color: var(--main-color);
+            box-shadow: 4px 4px var(--main-color);
+            color: var(--font-color);
+        }
+        
+        body.dark-mode .oauthButton {
+           border-color: var(--main-color);
+           background-color: var(--bg-color);
+           box-shadow: 4px 4px var(--main-color);
+           color: var(--font-color);
+        }
+        
+        body.dark-mode footer {
+            background-color: #111827;
+            color: var(--gray);
+        }
+
+        #theme-toggle-light-icon { display: none; }
+        #theme-toggle-dark-icon { display: block; }
+        body.dark-mode #theme-toggle-light-icon { display: block; }
+        body.dark-mode #theme-toggle-dark-icon { display: none; }
+        
+        body.dark-mode .theme-toggle-button {
+            border-color: var(--primary-blue);
+            color: var(--primary-blue);
+        }
+        
+        body.dark-mode .theme-toggle-button:hover {
+            background-color: var(--primary-blue);
+            color: #111827;
+        }
+
+        body.dark-mode .golden-line-gradient::before,
+        body.dark-mode .golden-line-gradient::after {
+            background: linear-gradient(to right, var(--primary-blue), var(--light-cream), var(--primary-blue));
+        }
+
+        body.dark-mode .golden-text {
+          background: -webkit-linear-gradient(45deg, var(--primary-blue), var(--dark-navy));
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
     </style>
+    <!-- DARK MODE TOGGLE BUTTON AND ICONS -->
 </head>
 
 <body>
-
+    <canvas id="bug-lines-canvas"></canvas>
+    <div id="bug-container"></div>
     <header>
         <div class="container header-content">
             <div class="logo">
                 <img src="./full.png" style="width: 100px;" alt="BugFreeSociety Avatar">
-                BugFreeSociety
+                NoBug Society
             </div>
             <nav style="z-index: 999;">
                 <a href="./index.html#home">Home</a>
@@ -1049,6 +1229,10 @@
                 <a href="./index.html#connect">Let's Work</a>
                 <a href="#policy">Policy</a>
             </nav>
+            <button id="theme-toggle" type="button" class="theme-toggle-button">
+                <svg id="theme-toggle-dark-icon" class="toggle-icon" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
+                <svg id="theme-toggle-light-icon" class="toggle-icon" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 5.05a1 1 0 010 1.414l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 0zM5 11a1 1 0 100-2H4a1 1 0 100 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
+            </button>
             <div class="mobile-menu-button">
                 <button>
                     <svg style="width: 1.5rem; height: 1.5rem;" fill="none" stroke="currentColor" viewBox="0 0 24 24"
@@ -1064,12 +1248,12 @@
     <main>
         <div class="containerr">
             <section id="terms-of-service">
-                <h1>BUGFREESOCIETY TERMS OF SERVICE</h1>
+                <h1>NoBug SOCIETY TERMS OF SERVICE</h1>
                 <p><em>Effective Date: July 19, 2025</em></p>
-                <p>Welcome to BugFreeSociety! We are delighted to offer our software development, quality assurance, and related services. These Terms of Service ("Terms") govern your access to and use of the services provided by BugFreeSociety ("BugFreeSociety," "we," "us," or "our"). By engaging with our services, you agree to be bound by these Terms.</p>
+                <p>Welcome to NoBug Society! We are delighted to offer our software development, quality assurance, and related services. These Terms of Service ("Terms") govern your access to and use of the services provided by NoBug Society ("NoBug Society," "we," or "our"). By engaging with our services, you agree to be bound by these Terms.</p>
 
                 <h2>1. Services Offered</h2>
-                <p>BugFreeSociety provides a range of software development and quality assurance services, including but not limited to:</p>
+                <p>NoBug Society provides a range of software development and quality assurance services, including but not limited to:</p>
                 <ul>
                     <li>Website Development</li>
                     <li>Application Development (Web, Mobile, Desktop)</li>
@@ -1081,36 +1265,36 @@
                     <li>Software Testing & Quality Assurance (Functional, Performance, Security, Usability, Automation, Mobile App Testing)</li>
                     <li>Consulting related to the above services.</li>
                 </ul>
-                <p>Detailed scope of work, deliverables, timelines, and specific pricing for each project will be outlined in a separate Project Proposal, Statement of Work (SOW), or Service Agreement ("Agreement") executed between BugFreeSociety and the Client ("You" or "Client").</p>
+                <p>Detailed scope of work, deliverables, timelines, and specific pricing for each project will be outlined in a separate Project Proposal, Statement of Work (SOW), or Service Agreement ("Agreement") executed between NoBug Society and the Client ("You" or "Client").</p>
 
                 <h2>2. Client Responsibilities</h2>
                 <p>You agree to:</p>
                 <ul>
                     <li>Provide timely and accurate information, content, feedback, and approvals required for the project.</li>
                     <li>Designate a primary contact person for communication.</li>
-                    <li>Ensure that all materials provided to BugFreeSociety (e.g., text, images, logos, code) do not infringe upon the intellectual property rights or other rights of any third party. You grant BugFreeSociety a non-exclusive, revocable, worldwide license to use such materials solely for the purpose of performing the agreed-upon services.</li>
+                    <li>Ensure that all materials provided to NoBug Society (e.g., text, images, logos, code) do not infringe upon the intellectual property rights or other rights of any third party. You grant NoBug Society a non-exclusive, revocable, worldwide license to use such materials solely for the purpose of performing the agreed-upon services.</li>
                     <li>Review deliverables promptly and provide feedback within agreed-upon timelines. Delays in feedback may impact project timelines and costs.</li>
                     <li>Make payments according to the agreed-upon schedule.</li>
                 </ul>
                 
                 <h2>3. Project Timelines and Deliverables</h2>
-                <p>Project timelines are estimates and are contingent upon timely client cooperation and unforeseen technical challenges. While we strive to adhere to agreed schedules, BugFreeSociety shall not be liable for delays caused by factors beyond our reasonable control. Deliverables will be provided as outlined in the specific Agreement.</p>
+                <p>Project timelines are estimates and are contingent upon timely client cooperation and unforeseen technical challenges. While we strive to adhere to agreed schedules, NoBug Society shall not be liable for delays caused by factors beyond our reasonable control. Deliverables will be provided as outlined in the specific Agreement.</p>
 
                 <h2>4. Payment Terms</h2>
                 <ul>
                     <li><strong>Pricing:</strong> All pricing will be detailed in the individual Agreement.</li>
                     <li><strong>Payment Schedule:</strong> Payments are typically structured as upfront deposits, milestone payments, and/or final payments. Specific percentages and due dates will be clearly outlined in your Agreement.</li>
                     <li><strong>Invoicing:</strong> Invoices will be issued according to the agreed payment schedule.</li>
-                    <li><strong>Late Payments:</strong> Payments not received by the due date may be subject to a late fee of <em>[e.g., 2% per month or EGP [Amount] per week]</em> on the outstanding balance. BugFreeSociety reserves the right to suspend work on any project until outstanding payments are settled.</li>
+                    <li><strong>Late Payments:</strong> Payments not received by the due date may be subject to a late fee of <em>[e.g., 2% per month or EGP [Amount] per week]</em> on the outstanding balance. NoBug Society reserves the right to suspend work on any project until outstanding payments are settled.</li>
                     <li><strong>Taxes:</strong> All prices are exclusive of any applicable taxes (e.g., VAT, sales tax) unless otherwise stated. Such taxes will be added to the invoice where legally required.</li>
                 </ul>
 
                 <h2>5. Intellectual Property Rights</h2>
                 <ul>
-                    <li><strong>Client Materials:</strong> All intellectual property rights in any materials provided by you to BugFreeSociety shall remain your sole property.</li>
-                    <li><strong>BugFreeSociety Tools & Pre-existing IP:</strong> BugFreeSociety retains all intellectual property rights in its proprietary tools, methodologies, pre-existing code libraries, and generic solutions that may be used in the development of your project. These are licensed to you on a non-exclusive, perpetual, worldwide basis solely for the operation of the delivered project.</li>
-                    <li><strong>Project Deliverables:</strong> Upon full and final payment for the project, and subject to the terms herein, BugFreeSociety will assign to you all intellectual property rights in the custom-developed elements of the final deliverables specifically created for your project (e.g., custom code, unique design elements), excluding any third-party components or BugFreeSociety's pre-existing IP.</li>
-                    <li><strong>Open Source:</strong> Where open-source components are used, they will be subject to their respective licenses. BugFreeSociety will endeavor to inform you of such usage where significant.</li>
+                    <li><strong>Client Materials:</strong> All intellectual property rights in any materials provided by you to NoBug Society shall remain your sole property.</li>
+                    <li><strong>NoBug Society Tools & Pre-existing IP:</strong> NoBug Society retains all intellectual property rights in its proprietary tools, methodologies, pre-existing code libraries, and generic solutions that may be used in the development of your project. These are licensed to you on a non-exclusive, perpetual, worldwide basis solely for the operation of the delivered project.</li>
+                    <li><strong>Project Deliverables:</strong> Upon full and final payment for the project, and subject to the terms herein, NoBug Society will assign to you all intellectual property rights in the custom-developed elements of the final deliverables specifically created for your project (e.g., custom code, unique design elements), excluding any third-party components or NoBug Society's pre-existing IP.</li>
+                    <li><strong>Open Source:</strong> Where open-source components are used, they will be subject to their respective licenses. NoBug Society will endeavor to inform you of such usage where significant.</li>
                 </ul>
 
                 <h2>6. Revisions and Scope Changes</h2>
@@ -1121,13 +1305,13 @@
 
                 <h2>7. Warranty and Bug Fixing</h2>
                 <ul>
-                    <li><strong>Warranty Period:</strong> BugFreeSociety provides a limited warranty period of <em>[e.g., 30 days / 60 days / 90 days]</em> from the date of final project delivery (or acceptance, if applicable) for the custom code and features explicitly outlined in the Agreement.</li>
+                    <li><strong>Warranty Period:</strong> NoBug Society provides a limited warranty period of <em>[e.g., 30 days / 60 days / 90 days]</em> from the date of final project delivery (or acceptance, if applicable) for the custom code and features explicitly outlined in the Agreement.</li>
                     <li><strong>What's Covered:</strong> During this period, we will rectify any bugs or defects directly attributable to our coding errors, free of charge.</li>
                     <li><strong>What's Not Covered:</strong> This warranty does not cover issues arising from:
                         <ul>
                             <li>Client modifications to the code or environment after delivery.</li>
-                            <li>Third-party software, plugins, or services not provided or controlled by BugFreeSociety.</li>
-                            <li>Server or hosting environment issues not managed by BugFreeSociety.</li>
+                            <li>Third-party software, plugins, or services not provided or controlled by NoBug Society.</li>
+                            <li>Server or hosting environment issues not managed by NoBug Society.</li>
                             <li>Browser or device compatibility issues not explicitly agreed upon.</li>
                             <li>Changes in external APIs or services used by the project.</li>
                             <li>New features or changes in functionality not part of the original scope.</li>
@@ -1140,13 +1324,13 @@
                 <p>Both parties agree to keep confidential all non-public information shared by the other party during the course of the engagement, except as required by law or with the express written consent of the disclosing party. This obligation survives the termination of these Terms.</p>
 
                 <h2>9. Limitation of Liability</h2>
-                <p>To the maximum extent permitted by law, BugFreeSociety shall not be liable for any indirect, incidental, special, consequential, or punitive damages, or any loss of profits or revenues, whether incurred directly or indirectly, or any loss of data, use, goodwill, or other intangible losses, resulting from (a) your use or inability to use the services; (b) any unauthorized access to or use of our servers and/or any personal information stored therein; (c) any interruption or cessation of transmission to or from our services; (d) any bugs, viruses, Trojan horses, or the like that may be transmitted to or through our services by any third party; (e) any errors or omissions in any content or for any loss or damage incurred as a result of your use of any content posted, emailed, transmitted, or otherwise made available through the services; and/or (f) the defamatory, offensive, or illegal conduct of any third party. In no event shall BugFreeSociety's aggregate liability for all claims relating to the services exceed the amount paid by you to BugFreeSociety for the specific project in question during the six (6) months prior to the event giving rise to the liability.</p>
+                <p>To the maximum extent permitted by law, NoBug Society shall not be liable for any indirect, incidental, special, consequential, or punitive damages, or any loss of profits or revenues, whether incurred directly or indirectly, or any loss of data, use, goodwill, or other intangible losses, resulting from (a) your use or inability to use the services; (b) any unauthorized access to or use of our servers and/or any personal information stored therein; (c) any interruption or cessation of transmission to or from our services; (d) any bugs, viruses, Trojan horses, or the like that may be transmitted to or through our services by any third party; (e) any errors or omissions in any content or for any loss or damage incurred as a result of your use of any content posted, emailed, transmitted, or otherwise made available through the services; and/or (f) the defamatory, offensive, or illegal conduct of any third party. In no event shall NoBug Society's aggregate liability for all claims relating to the services exceed the amount paid by you to NoBug Society for the specific project in question during the six (6) months prior to the event giving rise to the liability.</p>
 
                 <h2>10. Indemnification</h2>
-                <p>You agree to defend, indemnify, and hold harmless BugFreeSociety, its affiliates, licensors, and service providers, and its and their respective officers, directors, employees, contractors, agents, licensors, suppliers, successors, and assigns from and against any claims, liabilities, damages, judgments, awards, losses, costs, expenses, or fees (including reasonable attorneys' fees) arising out of or relating to your violation of these Terms or your use of the services, including, but not limited to, your User Contributions, any use of the Service's content, services, and products other than as expressly authorized in these Terms, or your use of any information obtained from the Service.</p>
+                <p>You agree to defend, indemnify, and hold harmless NoBug Society, its affiliates, licensors, and service providers, and its and their respective officers, directors, employees, contractors, agents, licensors, suppliers, successors, and assigns from and against any claims, liabilities, damages, judgments, awards, losses, costs, expenses, or fees (including reasonable attorneys' fees) arising out of or relating to your violation of these Terms or your use of the services, including, but not limited to, your User Contributions, any use of the Service's content, services, and products other than as expressly authorized in these Terms, or your use of any information obtained from the Service.</p>
 
                 <h2>11. Termination</h2>
-                <p>Either party may terminate an Agreement or these Terms with written notice if the other party breaches any material term herein and fails to remedy such breach within <em>[e.g., 15]</em> days of receiving written notice. In the event of termination by the Client without cause, or by BugFreeSociety due to Client's breach, all outstanding payments for work completed up to the date of termination shall become immediately due and payable.</p>
+                <p>Either party may terminate an Agreement or these Terms with written notice if the other party breaches any material term herein and fails to remedy such breach within <em>[e.g., 15]</em> days of receiving written notice. In the event of termination by the Client without cause, or by NoBug Society due to Client's breach, all outstanding payments for work completed up to the date of termination shall become immediately due and payable.</p>
 
                 <h2>12. Governing Law & Dispute Resolution</h2>
                 <p>These Terms and any dispute or claim arising out of or in connection with them or their subject matter or formation (including non-contractual disputes or claims) shall be governed by and construed in accordance with the laws of <strong>Egypt</strong>.</p>
@@ -1154,10 +1338,10 @@
 
                 <h2>13. Miscellaneous</h2>
                 <ul>
-                    <li><strong>Entire Agreement:</strong> These Terms, together with any executed Agreement, constitute the entire agreement between you and BugFreeSociety regarding the services.</li>
+                    <li><strong>Entire Agreement:</strong> These Terms, together with any executed Agreement, constitute the entire agreement between you and NoBug Society regarding the services.</li>
                     <li><strong>Severability:</strong> If any provision of these Terms is found to be unlawful, void, or for any reason unenforceable, then that provision shall be deemed severable from these Terms and shall not affect the validity and enforceability of any remaining provisions.</li>
-                    <li><strong>Waiver:</strong> No waiver by BugFreeSociety of any term or condition set out in these Terms shall be deemed a further or continuing waiver of such term or condition or a waiver of any other term or condition, and any failure of BugFreeSociety to assert a right or provision under these Terms shall not constitute a waiver of such right or provision.</li>
-                    <li><strong>Changes to Terms:</strong> BugFreeSociety reserves the right to revise and update these Terms from time to time in our sole discretion. All changes are effective immediately when we post them and apply to all access to and use of the services thereafter. Your continued use of the services following the posting of revised Terms means that you accept and agree to the changes.</li>
+                    <li><strong>Waiver:</strong> No waiver by NoBug Society of any term or condition set out in these Terms shall be deemed a further or continuing waiver of such term or condition or a waiver of any other term or condition, and any failure of NoBug Society to assert a right or provision under these Terms shall not constitute a waiver of such right or provision.</li>
+                    <li><strong>Changes to Terms:</strong> NoBug Society reserves the right to revise and update these Terms from time to time in our sole discretion. All changes are effective immediately when we post them and apply to all access to and use of the services thereafter. Your continued use of the services following the posting of revised Terms means that you accept and agree to the changes.</li>
                 </ul>
 
                 <h2>Contact Information:</h2>
@@ -1166,9 +1350,9 @@
             </section>
 
             <section id="privacy-policy">
-                <h1>BUGFREESOCIETY PRIVACY POLICY</h1>
+                <h1>NoBug SOCIETY PRIVACY POLICY</h1>
                 <p><em>Effective Date: July 19, 2025</em></p>
-                <p>BugFreeSociety ("BugFreeSociety," "we," "us," or "our") is committed to protecting the privacy of your personal information. This Privacy Policy describes how we collect, use, and share information when you engage with our services, visit our website, or communicate with us.</p>
+                <p>NoBug Society ("NoBug Society," "we," "us," or "our") is committed to protecting the privacy of your personal information. This Privacy Policy describes how we collect, use, and share information when you engage with our services, visit our website, or communicate with us.</p>
                 
                 <h2>1. Information We Collect</h2>
                 <p>We collect various types of information in connection with our services, including:</p>
@@ -1198,7 +1382,7 @@
                     <li><strong>For Internal Operations:</strong> For internal record-keeping, data analysis, research, and to improve our services and website.</li>
                     <li><strong>For Marketing and Promotion (with consent):</strong> To send you information about our services, promotions, and news that we believe may be of interest to you. You can opt-out of these communications at any time.</li>
                     <li><strong>To Comply with Legal Obligations:</strong> To meet legal, regulatory, or compliance requirements.</li>
-                    <li><strong>To Protect Our Rights:</strong> To protect the rights, property, or safety of BugFreeSociety, our clients, or others.</li>
+                    <li><strong>To Protect Our Rights:</strong> To protect the rights, property, or safety of NoBug Society, our clients, or others.</li>
                 </ul>
 
                 <h2>3. How We Share Your Information</h2>
@@ -1256,9 +1440,9 @@
             </section>
 
             <section id="refund-policy">
-                <h1>BUGFREESOCIETY REFUND & CANCELLATION POLICY</h1>
+                <h1>NoBug SOCIETY REFUND & CANCELLATION POLICY</h1>
                 <p><em>Effective Date: July 19, 2025</em></p>
-                <p>This Refund & Cancellation Policy outlines the conditions under which refunds may be issued and how project cancellations are handled for services provided by BugFreeSociety ("BugFreeSociety," "we," "us," or "our").</p>
+                <p>This Refund & Cancellation Policy outlines the conditions under which refunds may be issued and how project cancellations are handled for services provided by NoBug Society ("NoBug Society," "we," "us," or "our").</p>
 
                 <h2>1. Project Commencement and Initial Payments</h2>
                 <ul>
@@ -1269,7 +1453,7 @@
                 <h2>2. Refund Eligibility</h2>
                 <p>Refunds are generally not provided for work already performed or services already delivered. Eligibility for a partial refund may be considered under the following specific circumstances:</p>
                 <ul>
-                    <li><strong>BugFreeSociety Failure to Deliver:</strong> If BugFreeSociety fails to deliver a project or a significant milestone as outlined in the signed Agreement, and this failure is directly attributable to BugFreeSociety's actions or inaction, and all reasonable attempts to rectify the situation have failed. In such cases, the refund will be pro-rated based on the undelivered portion of the service, less any costs incurred by BugFreeSociety.</li>
+                    <li><strong>NoBug Society Failure to Deliver:</strong> If NoBug Society fails to deliver a project or a significant milestone as outlined in the signed Agreement, and this failure is directly attributable to NoBug Society's actions or inaction, and all reasonable attempts to rectify the situation have failed. In such cases, the refund will be pro-rated based on the undelivered portion of the service, less any costs incurred by NoBug Society.</li>
                     <li><strong>Pre-Commencement Cancellation:</strong> If a client cancels a project after signing the Agreement but before any work has officially commenced and before any significant resources have been allocated, a refund of any initial deposit may be considered, subject to an administrative fee of <em>[e.g., 10% of the deposit or a fixed amount like EGP [Amount]]</em>.</li>
                 </ul>
                 
@@ -1279,31 +1463,31 @@
                     <li>Change of Mind: If the client changes their mind or decides to pursue an alternative solution after work has commenced.</li>
                     <li>Client Delay/Non-Cooperation: Delays or inability to complete the project due to the client's failure to provide timely feedback, content, approvals, or necessary access.</li>
                     <li>Scope Changes: Any additional costs incurred due to changes in project scope requested by the client after the initial agreement.</li>
-                    <li>Third-Party Costs: Costs for third-party licenses, themes, plugins, hosting, or other services purchased on behalf of the client (unless the vendor provides a refund to BugFreeSociety).</li>
-                    <li>Issues Outside BugFreeSociety's Control: Problems arising from client-provided code, hosting environments not managed by BugFreeSociety, third-party software, or other factors outside our direct control.</li>
+                    <li>Third-Party Costs: Costs for third-party licenses, themes, plugins, hosting, or other services purchased on behalf of the client (unless the vendor provides a refund to NoBug Society).</li>
+                    <li>Issues Outside NoBug Society's Control: Problems arising from client-provided code, hosting environments not managed by NoBug Society, third-party software, or other factors outside our direct control.</li>
                     <li>Post-Acceptance Issues: Issues reported after the agreed-upon warranty period has expired.</li>
-                    <li>Termination for Cause by BugFreeSociety: If the project is terminated by BugFreeSociety due to the client's breach of contract (e.g., non-payment, intellectual property infringement, consistent non-cooperation). In such cases, all outstanding payments for work completed up to the termination date will become immediately due.</li>
+                    <li>Termination for Cause by NoBug Society: If the project is terminated by NoBug Society due to the client's breach of contract (e.g., non-payment, intellectual property infringement, consistent non-cooperation). In such cases, all outstanding payments for work completed up to the termination date will become immediately due.</li>
                 </ul>
                 
                 <h2>4. Project Cancellation and Termination</h2>
                 <ul>
-                    <li><strong>Cancellation by Client:</strong> If the client wishes to cancel a project, written notice must be provided to BugFreeSociety. The client will be invoiced for all work completed up to the date of cancellation, based on the agreed-upon hourly rates or a pro-rated portion of the fixed project fee, less any initial deposit already paid. Any outstanding balance will be due immediately.</li>
-                    <li><strong>Termination by BugFreeSociety:</strong> BugFreeSociety reserves the right to terminate a project if the client consistently fails to meet their responsibilities as outlined in the Terms of Service, including but not limited to, non-payment, excessive delays in providing feedback, or unethical conduct. In such cases, the client will be invoiced for all work completed to date, and any outstanding balance will be due immediately.</li>
-                    <li><strong>Intellectual Property upon Termination:</strong> Upon termination, and subject to full payment for all work completed, any intellectual property rights for the completed portions of the project developed specifically for the client will be transferred, as per the Terms of Service. If full payment is not received, BugFreeSociety retains all rights to the work performed.</li>
+                    <li><strong>Cancellation by Client:</strong> If the client wishes to cancel a project, written notice must be provided to NoBug Society. The client will be invoiced for all work completed up to the date of cancellation, based on the agreed-upon hourly rates or a pro-rated portion of the fixed project fee, less any initial deposit already paid. Any outstanding balance will be due immediately.</li>
+                    <li><strong>Termination by NoBug Society:</strong> NoBug Society reserves the right to terminate a project if the client consistently fails to meet their responsibilities as outlined in the Terms of Service, including but not limited to, non-payment, excessive delays in providing feedback, or unethical conduct. In such cases, the client will be invoiced for all work completed to date, and any outstanding balance will be due immediately.</li>
+                    <li><strong>Intellectual Property upon Termination:</strong> Upon termination, and subject to full payment for all work completed, any intellectual property rights for the completed portions of the project developed specifically for the client will be transferred, as per the Terms of Service. If full payment is not received, NoBug Society retains all rights to the work performed.</li>
                 </ul>
 
                 <h2>5. Process for Refund/Cancellation Request</h2>
-                <p>All requests for refunds or project cancellations must be submitted in writing via email to <em>[Your Email Address]</em>. Please include your project name, invoice number, and a detailed explanation of your request. BugFreeSociety will review your request and respond within <em>[e.g., 10-15]</em> business days.</p>
+                <p>All requests for refunds or project cancellations must be submitted in writing via email to <em>[Your Email Address]</em>. Please include your project name, invoice number, and a detailed explanation of your request. NoBug Society will review your request and respond within <em>[e.g., 10-15]</em> business days.</p>
 
                 <h2>6. Changes to This Policy</h2>
-                <p>BugFreeSociety reserves the right to amend this Refund & Cancellation Policy at any time. All changes will be effective immediately upon posting. Your continued engagement with our services after any changes indicates your acceptance of the revised policy.</p>
+                <p>NoBug Society reserves the right to amend this Refund & Cancellation Policy at any time. All changes will be effective immediately upon posting. Your continued engagement with our services after any changes indicates your acceptance of the revised policy.</p>
             </section>
         </div>
     </main>
 
     <footer>
         <div class="container">
-            <p>&copy; 2025 BugFreeSociety. All Rights Reserved.</p>
+            <p>&copy; 2025 NoBug Society. All Rights Reserved.</p>
         </div>
     </footer>
     <script>
@@ -1316,5 +1500,35 @@
             });
         }
     </script>
+    <script>
+// --- Dark Mode Toggle ---
+const themeToggleButton = document.getElementById('theme-toggle');
+const body = document.body;
+const applyTheme = (theme) => {
+    if (theme === 'dark') {
+        body.classList.add('dark-mode');
+        localStorage.setItem('theme', 'dark');
+    } else {
+        body.classList.remove('dark-mode');
+        localStorage.setItem('theme', 'light');
+    }
+};
+const savedTheme = localStorage.getItem('theme');
+const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+if (savedTheme) {
+    applyTheme(savedTheme);
+} else if (prefersDark) {
+    applyTheme('dark');
+}
+if (themeToggleButton) {
+    themeToggleButton.addEventListener('click', () => {
+        if (body.classList.contains('dark-mode')) {
+            applyTheme('light');
+        } else {
+            applyTheme('dark');
+        }
+    });
+}
+</script>
 </body>
 </html>

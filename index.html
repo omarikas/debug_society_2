@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bug Free Society</title>
+    <title>No Bug  Society</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -68,6 +68,7 @@
             line-height: 1.6;
             cursor: crosshair;
             overflow-x: hidden;
+            transition: background-color 0.3s, color 0.3s;
         }
 
         .container {
@@ -82,6 +83,7 @@
         header {
             background-color: var(--white);
             border-bottom: 1px solid #e5e7eb;
+            transition: background-color 0.3s;
         }
 
         .header-content {
@@ -183,6 +185,7 @@
             text-align: center;
             padding-top: 5rem;
             padding-bottom: 5rem;
+            transition: background-color 0.3s;
         }
 
         .hero-heading {
@@ -269,6 +272,7 @@
             background-color: var(--light-cream);
             padding-top: 5rem;
             padding-bottom: 5rem;
+            transition: background-color 0.3s;
         }
 
         .about-title {
@@ -304,6 +308,7 @@
             text-align: center;
             color: var(--light-cream);
             border-top: 1px solid #e5e7eb;
+            transition: background-color 0.3s, color 0.3s;
         }
 
         /* --- Bug & Connection Styles --- */
@@ -328,6 +333,7 @@
             padding-top: 5rem;
             padding-bottom: 5rem;
             background-color: var(--white);
+            transition: background-color 0.3s;
         }
 
         .services-title {
@@ -798,7 +804,7 @@
             border-radius: 5px;
             border: 2px solid var(--main-color);
             box-shadow: 4px 4px var(--main-color);
-
+            transition: background-color 0.3s;
         }
 
         .form>p {
@@ -941,6 +947,176 @@
             top: 0;
             left: 0;
         }
+
+        /* --- Theme Toggle Button --- */
+        .theme-toggle-button {
+            background-color: transparent;
+            border: 1px solid var(--dark-navy);
+            color: var(--dark-navy);
+            border-radius: 9999px;
+            padding: 0.5rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            margin-left: auto;
+            margin-right: 1rem;
+        }
+
+        .theme-toggle-button:hover {
+            background-color: var(--dark-navy);
+            color: var(--white);
+        }
+
+        .theme-toggle-button .toggle-icon {
+            width: 1.25rem;
+            height: 1.25rem;
+        }
+
+        /* --- Dark Mode Variables & Styles --- */
+        body.dark-mode {
+            --dark-navy: #E5E7EB;
+            /* Light Gray for Text */
+            --primary-blue: #60A5FA;
+            /* Brighter Blue for accents */
+            --accent-gold: #FBBF24;
+            /* Slightly brighter gold */
+            --light-cream: #111827;
+            /* Dark BG for sections */
+            --white: #1A2C5B;
+            /* Dark BG for main body */
+            --gray: #9CA3AF;
+            /* Lighter gray for subtext */
+            cursor: default;
+        }
+        
+        body.dark-mode .logo img,
+        body.dark-mode #hero-logo,
+        body.dark-mode #hero-bug {
+           filter: invert(1) hue-rotate(180deg);
+        }
+
+        /* Specific overrides for dark mode */
+        body.dark-mode .btn-primary {
+          background-color: var(--primary-blue);
+          color: #111827;
+        }
+        
+        body.dark-mode .btn-primary:hover {
+            background-color: var(--dark-navy);
+            color: #111827;
+        }
+
+        body.dark-mode .btn-secondary {
+          background-color: transparent;
+          color: var(--primary-blue);
+          border-color: var(--primary-blue);
+        }
+
+        body.dark-mode .btn-secondary:hover {
+          background-color: var(--primary-blue);
+          color: #111827;
+        }
+
+        body.dark-mode .card {
+          background: #1F2937; /* Card BG */
+          border-color: var(--primary-blue);
+        }
+
+        body.dark-mode .card-front,
+        body.dark-mode .card-back {
+            background: #1F2937;
+            color: var(--dark-navy);
+            border-color: var(--primary-blue);
+        }
+        
+         body.dark-mode .card-back {
+            background: var(--dark-navy);
+            color: #111827;
+            border-color: var(--primary-blue);
+        }
+
+        body.dark-mode .card-content {
+          background: #1F2937;
+        }
+        
+        body.dark-mode .product-title {
+            color: var(--dark-navy);
+            border-color: var(--primary-blue);
+        }
+
+        body.dark-mode .buy-button {
+            background: var(--primary-blue);
+            color: #111827;
+            border-color: var(--primary-blue);
+        }
+        
+        body.dark-mode .product-image {
+            background: #111827;
+            border-bottom-color: var(--primary-blue);
+        }
+
+        body.dark-mode .product-svg .svg-p-bg { fill: #374151; }
+        body.dark-mode .product-svg .svg-p-fg { fill: #9CA3AF; }
+        body.dark-mode .product-svg .svg-s-white { fill: #E5E7EB; stroke: #E5E7EB; }
+        body.dark-mode .product-svg .svg-s-dark { fill: #111827; stroke: #E5E7EB; }
+        
+        body.dark-mode .bug g path { stroke: var(--primary-blue); }
+        body.dark-mode .bug g ellipse:nth-of-type(1) { fill: var(--primary-blue); }
+        body.dark-mode .bug g ellipse:nth-of-type(2) { fill: #111827; }
+        
+        body.dark-mode .form {
+            --font-color: #E5E7EB;
+            --bg-color: #1F2937;
+            --main-color: var(--primary-blue);
+            background: #111827;
+        }
+
+        body.dark-mode .form > input {
+            background-color: var(--bg-color);
+            border-color: var(--main-color);
+            box-shadow: 4px 4px var(--main-color);
+            color: var(--font-color);
+        }
+        
+        body.dark-mode .oauthButton {
+           border-color: var(--main-color);
+           background-color: var(--bg-color);
+           box-shadow: 4px 4px var(--main-color);
+           color: var(--font-color);
+        }
+        
+        body.dark-mode footer {
+            background-color: #111827;
+            color: var(--gray);
+        }
+
+        #theme-toggle-light-icon { display: none; }
+        #theme-toggle-dark-icon { display: block; }
+        body.dark-mode #theme-toggle-light-icon { display: block; }
+        body.dark-mode #theme-toggle-dark-icon { display: none; }
+        
+        body.dark-mode .theme-toggle-button {
+            border-color: var(--primary-blue);
+            color: var(--primary-blue);
+        }
+        
+        body.dark-mode .theme-toggle-button:hover {
+            background-color: var(--primary-blue);
+            color: #111827;
+        }
+
+        body.dark-mode .golden-line-gradient::before,
+        body.dark-mode .golden-line-gradient::after {
+            background: linear-gradient(to right, var(--primary-blue), var(--light-cream), var(--primary-blue));
+        }
+
+        body.dark-mode .golden-text {
+          background: -webkit-linear-gradient(45deg, var(--primary-blue), var(--dark-navy));
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
     </style>
 </head>
 
@@ -952,7 +1128,7 @@
         <div class="container header-content">
             <div class="logo">
                 <img src="./full.png" style="width: 100px;" alt="BugFreeSociety Avatar">
-                BugFreeSociety
+                NoBug Society
             </div>
             <nav style="z-index: 999;">
                 <a href="#home">Home</a>
@@ -961,6 +1137,10 @@
                 <a href="#connect">Let's Work</a>
                 <a href="./policy.html">Policy</a>
             </nav>
+            <button id="theme-toggle" type="button" class="theme-toggle-button">
+                <svg id="theme-toggle-dark-icon" class="toggle-icon" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
+                <svg id="theme-toggle-light-icon" class="toggle-icon" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 5.05a1 1 0 010 1.414l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 0zM5 11a1 1 0 100-2H4a1 1 0 100 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
+            </button>
             <div class="mobile-menu-button">
                 <button>
                     <svg style="width: 1.5rem; height: 1.5rem;" fill="none" stroke="currentColor" viewBox="0 0 24 24"
@@ -982,7 +1162,7 @@
                         <img src="./logo.png" id="hero-logo" alt="BugFreeSociety Avatar">
                         <img src="./bug.png" id="hero-bug" alt="BugFreeSociety Avatar">
                     </div>
-                    <h1 class="hero-heading">Bug Free Society</h1>
+                    <h1 class="hero-heading">No Bug  Society</h1>
                     <p class="hero-subheading">Code Without Limits. We build websites, applications, and tech projects
                         that
                         are fun, alive, and professional.</p>
@@ -1012,8 +1192,8 @@
             <div class="container">
                 <h2 class="about-title">About Us</h2>
                 <div class="about-content">
-                    <p>Welcome to BugFreeSociety! We're not just a company; we're a movement born from the belief that
-                        technology should simply work. The name "BugFreeSociety" reflects our core conviction: it's our
+                    <p>Welcome to NoBug Society! We're not just a company; we're a movement born from the belief that
+                        technology should simply work. The name "NoBug Society" reflects our core conviction: it's our
                         collective responsibility to ensure that the code powering our digital world is flawless,
                         enabling everyone to achieve their goals without the frustration of bugs or mistakes. We apply
                         this principle to everything we touch, from applications and websites to chatbots, games, and
@@ -1021,7 +1201,7 @@
                     <p>Our journey began humbly with two friends at the GUC (German University in Cairo). What started
                         as a small idea -- developing a few simple websites -- quickly blossomed into a shared vision.
                         We realized the immense need for truly reliable software, and that passion ignited the spark to
-                        build BugFreeSociety into the company it is today. We're driven by that same initial excitement
+                        build NoBug Society into the company it is today. We're driven by that same initial excitement
                         and a commitment to quality in every line of code.</p>
                 </div>
             </div>
@@ -1420,7 +1600,7 @@ To be the leading force in digital innovation where quality is never compromised
 
     <footer>
         <div class="container">
-            <p>&copy; 2025 BugFreeSociety. All Rights Reserved.</p>
+            <p>&copy; 2025 NoBug Society. All Rights Reserved.</p>
         </div>
     </footer>
 
@@ -1443,6 +1623,39 @@ To be the leading force in digital innovation where quality is never compromised
                 nav.classList.toggle('mobile-nav-active');
             });
         }
+        
+        // --- Dark Mode Toggle ---
+        const themeToggleButton = document.getElementById('theme-toggle');
+        const body = document.body;
+
+        const applyTheme = (theme) => {
+            if (theme === 'dark') {
+                body.classList.add('dark-mode');
+                localStorage.setItem('theme', 'dark');
+            } else {
+                body.classList.remove('dark-mode');
+                localStorage.setItem('theme', 'light');
+            }
+        };
+
+        const savedTheme = localStorage.getItem('theme');
+        const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+        if (savedTheme) {
+            applyTheme(savedTheme);
+        } else if (prefersDark) {
+            applyTheme('dark');
+        }
+
+        if (themeToggleButton) {
+            themeToggleButton.addEventListener('click', () => {
+                if (body.classList.contains('dark-mode')) {
+                    applyTheme('light');
+                } else {
+                    applyTheme('dark');
+                }
+            });
+        }
+
         // --- Bug Animation Script ---
         const bugContainer = document.getElementById('bug-container');
         const canvas = document.getElementById('bug-lines-canvas');
@@ -1503,7 +1716,14 @@ To be the leading force in digital innovation where quality is never compromised
                     bug.el.style.left = bug.x + 'px';
                     bug.el.style.top = bug.y + 'px';
                 });
-                ctx.strokeStyle = 'rgba(245, 184, 65, 0.4)';
+
+                // Set line color based on theme
+                if (document.body.classList.contains('dark-mode')) {
+                    ctx.strokeStyle = 'rgba(96, 165, 250, 0.4)'; // Light blue for dark mode
+                } else {
+                    ctx.strokeStyle = 'rgba(245, 184, 65, 0.4)'; // Gold for light mode
+                }
+
                 ctx.lineWidth = 1.5;
                 for (let i = 0; i < bugs.length; i++) {
                     for (let j = i + 1; j < bugs.length; j++) {
