@@ -1734,6 +1734,26 @@ To be the leading force in digital innovation where quality is never compromised
                 requestAnimationFrame(animate);
             }
             animate();
+
+            // Make all bugs die when the Continue button is clicked
+            const continueButton = document.querySelector('.oauthButton');
+            if (continueButton) {
+                continueButton.addEventListener('click', () => {
+                    bugs.forEach(bug => {
+                        if (bug.isAlive) {
+                            bug.isAlive = false;
+                            bug.el.style.transform = `translate(-50%, -50%) rotate(180deg) scale(0.9)`;
+                            bug.el.style.opacity = '0.7';
+                            setTimeout(() => {
+                                bug.isAlive = true;
+                                bug.el.style.opacity = '1';
+                                bug.x = Math.random() * window.innerWidth;
+                                bug.y = window.scrollY + (Math.random() * window.innerHeight);
+                            }, 2000);
+                        }
+                    });
+                });
+            }
         }
     </script>
 </body>
