@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>No Bug  Society</title>
+    <title>No Bug Society</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -18,34 +18,36 @@
             --white: #FFFFFF;
             --gray: #6B7280;
         }
+
         .golden-line-gradient {
-  display: flex;
-  align-items: center;
-  text-align: center;
-  margin: 30px 0;
-}
+            display: flex;
+            align-items: center;
+            text-align: center;
+            margin: 30px 0;
+        }
 
-/* Creates a gradient line for a shiny effect */
-.golden-line-gradient::before,
-.golden-line-gradient::after {
-  content: '';
-  flex: 1;
-  height: 3px; /* A slightly thicker line */
-  background: linear-gradient(to right, #BF953F, #FCF6BA, #B38728, #FBF5B7, #AA771C);
-}
+        /* Creates a gradient line for a shiny effect */
+        .golden-line-gradient::before,
+        .golden-line-gradient::after {
+            content: '';
+            flex: 1;
+            height: 3px;
+            /* A slightly thicker line */
+            background: linear-gradient(to right, #BF953F, #FCF6BA, #B38728, #FBF5B7, #AA771C);
+        }
 
-.golden-text {
-  padding: 0 20px;
-  font-size: 1.8em;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  
-  /* Creates a gradient effect for the text itself */
-  background: -webkit-linear-gradient(45deg, #BF953F, #FCF6BA, #AA771C);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
+        .golden-text {
+            padding: 0 20px;
+            font-size: 1.8em;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+
+            /* Creates a gradient effect for the text itself */
+            background: -webkit-linear-gradient(45deg, #BF953F, #FCF6BA, #AA771C);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
 
         /* --- Reset & Basic Styles --- */
         body,
@@ -375,8 +377,8 @@
         }
 
         .card-inner.is-flipped {
-    transform: rotateY(180deg);
-}
+            transform: rotateY(180deg);
+        }
 
         .card-front,
         .card-back {
@@ -385,15 +387,16 @@
             height: 100%;
             backface-visibility: hidden;
             background: var(--white);
-              transform: translateZ(0);
+            transform: translateZ(0);
         }
-    video{
-        width: 100%;
-        height:360px;
-        z-index: 10;
-   
+
+        video {
+            width: 100%;
+            height: 360px;
+            z-index: 10;
+
             object-fit: contain;
-    }
+        }
 
         .card-front {
             display: flex;
@@ -404,7 +407,7 @@
             color: var(--dark-navy);
             border: 8px solid var(--dark-navy);
             box-sizing: border-box;
-    }
+        }
 
         .card-back {
             transform: rotateY(180deg);
@@ -432,6 +435,7 @@
             letter-spacing: 2px;
             text-transform: uppercase;
             opacity: 0.8;
+            padding: 10px;
         }
 
         .card::after {
@@ -990,38 +994,39 @@
             /* Lighter gray for subtext */
             cursor: default;
         }
-        
+
         body.dark-mode .logo img,
         body.dark-mode #hero-logo,
         body.dark-mode #hero-bug {
-           filter: invert(1) hue-rotate(180deg);
+            filter: invert(1) hue-rotate(180deg);
         }
 
         /* Specific overrides for dark mode */
         body.dark-mode .btn-primary {
-          background-color: var(--primary-blue);
-          color: #111827;
+            background-color: var(--primary-blue);
+            color: #111827;
         }
-        
+
         body.dark-mode .btn-primary:hover {
             background-color: var(--dark-navy);
             color: #111827;
         }
 
         body.dark-mode .btn-secondary {
-          background-color: transparent;
-          color: var(--primary-blue);
-          border-color: var(--primary-blue);
+            background-color: transparent;
+            color: var(--primary-blue);
+            border-color: var(--primary-blue);
         }
 
         body.dark-mode .btn-secondary:hover {
-          background-color: var(--primary-blue);
-          color: #111827;
+            background-color: var(--primary-blue);
+            color: #111827;
         }
 
         body.dark-mode .card {
-          background: #1F2937; /* Card BG */
-          border-color: var(--primary-blue);
+            background: #1F2937;
+            /* Card BG */
+            border-color: var(--primary-blue);
         }
 
         body.dark-mode .card-front,
@@ -1030,17 +1035,17 @@
             color: var(--dark-navy);
             border-color: var(--primary-blue);
         }
-        
-         body.dark-mode .card-back {
+
+        body.dark-mode .card-back {
             background: var(--dark-navy);
             color: #111827;
             border-color: var(--primary-blue);
         }
 
         body.dark-mode .card-content {
-          background: #1F2937;
+            background: #1F2937;
         }
-        
+
         body.dark-mode .product-title {
             color: var(--dark-navy);
             border-color: var(--primary-blue);
@@ -1051,21 +1056,42 @@
             color: #111827;
             border-color: var(--primary-blue);
         }
-        
+
         body.dark-mode .product-image {
             background: #111827;
             border-bottom-color: var(--primary-blue);
         }
 
-        body.dark-mode .product-svg .svg-p-bg { fill: #374151; }
-        body.dark-mode .product-svg .svg-p-fg { fill: #9CA3AF; }
-        body.dark-mode .product-svg .svg-s-white { fill: #E5E7EB; stroke: #E5E7EB; }
-        body.dark-mode .product-svg .svg-s-dark { fill: #111827; stroke: #E5E7EB; }
-        
-        body.dark-mode .bug g path { stroke: var(--primary-blue); }
-        body.dark-mode .bug g ellipse:nth-of-type(1) { fill: var(--primary-blue); }
-        body.dark-mode .bug g ellipse:nth-of-type(2) { fill: #111827; }
-        
+        body.dark-mode .product-svg .svg-p-bg {
+            fill: #374151;
+        }
+
+        body.dark-mode .product-svg .svg-p-fg {
+            fill: #9CA3AF;
+        }
+
+        body.dark-mode .product-svg .svg-s-white {
+            fill: #E5E7EB;
+            stroke: #E5E7EB;
+        }
+
+        body.dark-mode .product-svg .svg-s-dark {
+            fill: #111827;
+            stroke: #E5E7EB;
+        }
+
+        body.dark-mode .bug g path {
+            stroke: var(--primary-blue);
+        }
+
+        body.dark-mode .bug g ellipse:nth-of-type(1) {
+            fill: var(--primary-blue);
+        }
+
+        body.dark-mode .bug g ellipse:nth-of-type(2) {
+            fill: #111827;
+        }
+
         body.dark-mode .form {
             --font-color: #E5E7EB;
             --bg-color: #1F2937;
@@ -1073,35 +1099,46 @@
             background: #111827;
         }
 
-        body.dark-mode .form > input {
+        body.dark-mode .form>input {
             background-color: var(--bg-color);
             border-color: var(--main-color);
             box-shadow: 4px 4px var(--main-color);
             color: var(--font-color);
         }
-        
+
         body.dark-mode .oauthButton {
-           border-color: var(--main-color);
-           background-color: var(--bg-color);
-           box-shadow: 4px 4px var(--main-color);
-           color: var(--font-color);
+            border-color: var(--main-color);
+            background-color: var(--bg-color);
+            box-shadow: 4px 4px var(--main-color);
+            color: var(--font-color);
         }
-        
+
         body.dark-mode footer {
             background-color: #111827;
             color: var(--gray);
         }
 
-        #theme-toggle-light-icon { display: none; }
-        #theme-toggle-dark-icon { display: block; }
-        body.dark-mode #theme-toggle-light-icon { display: block; }
-        body.dark-mode #theme-toggle-dark-icon { display: none; }
-        
+        #theme-toggle-light-icon {
+            display: none;
+        }
+
+        #theme-toggle-dark-icon {
+            display: block;
+        }
+
+        body.dark-mode #theme-toggle-light-icon {
+            display: block;
+        }
+
+        body.dark-mode #theme-toggle-dark-icon {
+            display: none;
+        }
+
         body.dark-mode .theme-toggle-button {
             border-color: var(--primary-blue);
             color: var(--primary-blue);
         }
-        
+
         body.dark-mode .theme-toggle-button:hover {
             background-color: var(--primary-blue);
             color: #111827;
@@ -1113,9 +1150,9 @@
         }
 
         body.dark-mode .golden-text {
-          background: -webkit-linear-gradient(45deg, var(--primary-blue), var(--dark-navy));
-          -webkit-background-clip: text;
-          -webkit-text-fill-color: transparent;
+            background: -webkit-linear-gradient(45deg, var(--primary-blue), var(--dark-navy));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
     </style>
 </head>
@@ -1138,8 +1175,16 @@
                 <a href="./policy.html">Policy</a>
             </nav>
             <button id="theme-toggle" type="button" class="theme-toggle-button">
-                <svg id="theme-toggle-dark-icon" class="toggle-icon" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
-                <svg id="theme-toggle-light-icon" class="toggle-icon" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 5.05a1 1 0 010 1.414l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 0zM5 11a1 1 0 100-2H4a1 1 0 100 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
+                <svg id="theme-toggle-dark-icon" class="toggle-icon" fill="currentColor" viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+                </svg>
+                <svg id="theme-toggle-light-icon" class="toggle-icon" fill="currentColor" viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 5.05a1 1 0 010 1.414l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 0zM5 11a1 1 0 100-2H4a1 1 0 100 2h1z"
+                        fill-rule="evenodd" clip-rule="evenodd"></path>
+                </svg>
             </button>
             <div class="mobile-menu-button">
                 <button>
@@ -1162,14 +1207,14 @@
                         <img src="./logo.png" id="hero-logo" alt="BugFreeSociety Avatar">
                         <img src="./bug.png" id="hero-bug" alt="BugFreeSociety Avatar">
                     </div>
-                    <h1 class="hero-heading">No Bug  Society</h1>
+                    <h1 class="hero-heading">No Bug Society</h1>
                     <p class="hero-subheading">Code Without Limits. We build websites, applications, and tech projects
                         that
                         are fun, alive, and professional.</p>
 
                     <div class="hero-buttons">
-                        <a href="#" class="btn btn-primary">Explore Services</a>
-                        <a href="#" class="btn btn-secondary">View Portfolio</a>
+                        <a href="#services" class="btn btn-primary">Explore Services</a>
+                        <a href="./portfoli.html" class="btn btn-secondary">View Portfolio</a>
                     </div>
                 </div>
         </section>
@@ -1188,10 +1233,10 @@
                 <span class="ticker-item">Pure CSS Animation</span>
             </div>
         </div>
-        <section  id="about" class="about-section">
+        <section id="about" class="about-section">
             <div class="container">
                 <h2 class="about-title">About Us</h2>
-                <div class="about-content">
+                <div style="text-align: justify;" class="about-content">
                     <p>Welcome to NoBug Society! We're not just a company; we're a movement born from the belief that
                         technology should simply work. The name "NoBug Society" reflects our core conviction: it's our
                         collective responsibility to ensure that the code powering our digital world is flawless,
@@ -1208,7 +1253,7 @@
         </section>
 
         <section class="services-section">
-            <div class="container">
+            <div id="services" class="container">
                 <h2 class="services-title">What We Do</h2>
                 <div class="services-grid">
 
@@ -1245,7 +1290,9 @@
                             </div>
                             <div class="card-back">
                                 <div class="added-text">Websites</div>
-                                <div class="added-subtext">Our Approach</div>
+                                <div class="added-subtext">
+                                    E-commerce websites, landing pages, and educational websites using React, Vue,
+                                    Angular, CSS, Tailwind, and Bootstrap.</div>
                             </div>
                         </div>
                     </div>
@@ -1283,7 +1330,8 @@
                             </div>
                             <div class="card-back">
                                 <div class="added-text">Applications</div>
-                                <div class="added-subtext">Our Approach</div>
+                                <div class="added-subtext">E-commerce apps, social media apps, and entertainment apps
+                                    built with Flutter and React Native.</div>
                             </div>
                         </div>
                     </div>
@@ -1321,7 +1369,8 @@
                             </div>
                             <div class="card-back">
                                 <div class="added-text">Games</div>
-                                <div class="added-subtext">Our Approach</div>
+                                <div class="added-subtext">2D & 3D games, both online and offline, developed with Unity.
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -1359,7 +1408,8 @@
                             </div>
                             <div class="card-back">
                                 <div class="added-text">Dashboards</div>
-                                <div class="added-subtext">Our Approach</div>
+                                <div class="added-subtext">Dashboards for apps and websites to manage and visualize
+                                    existing data, built with modern web technologies</div>
                             </div>
                         </div>
                     </div>
@@ -1397,7 +1447,8 @@
                             </div>
                             <div class="card-back">
                                 <div class="added-text">Optimization</div>
-                                <div class="added-subtext">Our Approach</div>
+                                <div class="added-subtext">Code refinement and bug fixing to enhance speed, stability,
+                                    and performance across various platforms.</div>
                             </div>
                         </div>
                     </div>
@@ -1435,7 +1486,9 @@
                             </div>
                             <div class="card-back">
                                 <div class="added-text">Animation</div>
-                                <div class="added-subtext">Our Approach</div>
+                                <div class="added-subtext">Unity-based 2D/3D visuals and animations to improve
+                                    aesthetics and engagement.
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -1473,16 +1526,18 @@
                             </div>
                             <div class="card-back">
                                 <div class="added-text">Chatbots</div>
-                                <div class="added-subtext">Our Approach</div>
+                                <div class="added-subtext">AI-powered chatbots to automate communication and tasks,
+                                    enhancing customer interaction</div>
                             </div>
                         </div>
                     </div>
 
                 </div>
             </div>
-        </section><div class="golden-line-gradient">
-  <span class="golden-text">Vision and Mission</span>
-</div>
+        </section>
+        <div class="golden-line-gradient">
+            <span class="golden-text">Vision and Mission</span>
+        </div>
         <section class="services-section">
             <div class="container">
                 <div class="services-grid">
@@ -1491,75 +1546,88 @@
                             <div class="card-front">
                                 <div class="product-image"><svg class="product-svg" viewBox="0 0 100 100"
                                         xmlns="http://www.w3.org/2000/svg">
-                            <defs>
-                                <pattern id="p8" patternUnits="userSpaceOnUse" width="8" height="8">
-                                    <rect class="svg-p-bg" width="8" height="8"></rect>
-                                    <rect class="svg-p-fg" width="4" height="4"></rect>
-                                    <rect class="svg-p-fg" x="4" y="4" width="4" height="4"></rect>
-                                </pattern>
-                            </defs>
-                            <polygon class="svg-s-white" points="50,10 90,30 90,70 50,90 10,70 10,30" stroke-width="3">
-                            </polygon>
-                            <polygon class="svg-s-dark" points="50,20 80,35 80,65 50,80 20,65 20,35" stroke-width="2">
-                            </polygon>
-                            <rect x="35" y="35" width="30" height="30" fill="url(#p8)"></rect>
-                            <polygon class="svg-s-white" points="50,25 70,40 50,55 30,40"></polygon>
-                            <circle class="svg-s-accent" cx="50" cy="45" r="8"></circle>
-                            <rect class="svg-s-white" x="46" y="41" width="8" height="8"></rect>
-                            <polygon class="svg-s-white" points="50,60 65,70 50,75 35,70"></polygon>
-                        </svg></div>
-                    <div class="card-content">
-                        <div class="product-title">Our Mission</div>
-                        <div class="product-description">To empower individuals and businesses by delivering flawless, high-performing digital products — combining expert development, rigorous quality assurance, and stunning visual design to turn ideas into impactful realities.</div>
-                        
-                    </div>
-                </div>
-                <div class="card-back">
-                    <div class="added-text">Our Mission</div>
-                    <div class="added-subtext">Our Purpose</div>
-                </div>
-            </div>
-        </div>
-
-                <div class="card">
-                    <div class="card-inner">
-                        <div class="card-front">
-                            <div class="product-image"><svg class="product-svg" viewBox="0 0 100 100"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <defs>
-                                        <pattern id="p9" patternUnits="userSpaceOnUse" width="8" height="8">
-                                            <rect class="svg-p-bg" width="8" height="8"></rect>
-                                            <rect class="svg-p-fg" width="4" height="4"></rect>
-                                            <rect class="svg-p-fg" x="4" y="4" width="4" height="4"></rect>
-                                        </pattern>
-                                    </defs>
-                                    <polygon class="svg-s-white" points="50,10 90,30 90,70 50,90 10,70 10,30"
-                                        stroke-width="3"></polygon>
-                                    <polygon class="svg-s-dark" points="50,20 80,35 80,65 50,80 20,65 20,35"
-                                        stroke-width="2"></polygon>
-                                    <rect x="35" y="35" width="30" height="30" fill="url(#p9)"></rect>
-                                    <polygon class="svg-s-white" points="50,25 70,40 50,55 30,40"></polygon>
-                                    <circle class="svg-s-accent" cx="50" cy="45" r="8"></circle>
-                                    <rect class="svg-s-white" x="46" y="41" width="8" height="8"></rect>
-                                    <polygon class="svg-s-white" points="50,60 65,70 50,75 35,70"></polygon>
-                                </svg></div>
-                            <div class="card-content">
-                                <div class="product-title">Our Vision</div>
-                                <div class="product-description">
-
-                                     
-To be the leading force in digital innovation where quality is never compromised — a world where every product we touch is intuitive, reliable, visually engaging, and completely bug-free
+                                        <defs>
+                                            <pattern id="p8" patternUnits="userSpaceOnUse" width="8" height="8">
+                                                <rect class="svg-p-bg" width="8" height="8"></rect>
+                                                <rect class="svg-p-fg" width="4" height="4"></rect>
+                                                <rect class="svg-p-fg" x="4" y="4" width="4" height="4"></rect>
+                                            </pattern>
+                                        </defs>
+                                        <polygon class="svg-s-white" points="50,10 90,30 90,70 50,90 10,70 10,30"
+                                            stroke-width="3">
+                                        </polygon>
+                                        <polygon class="svg-s-dark" points="50,20 80,35 80,65 50,80 20,65 20,35"
+                                            stroke-width="2">
+                                        </polygon>
+                                        <rect x="35" y="35" width="30" height="30" fill="url(#p8)"></rect>
+                                        <polygon class="svg-s-white" points="50,25 70,40 50,55 30,40"></polygon>
+                                        <circle class="svg-s-accent" cx="50" cy="45" r="8"></circle>
+                                        <rect class="svg-s-white" x="46" y="41" width="8" height="8"></rect>
+                                        <polygon class="svg-s-white" points="50,60 65,70 50,75 35,70"></polygon>
+                                    </svg></div>
+                                <div class="card-content">
+                                    <div class="product-title">Our Mission</div>
+                                    <div class="product-description"></div>
+ <div class="buy-button">
+                                        <div><span>Details</span></div>
+                                    </div>
                                 </div>
                                 
                             </div>
+                            <div class="card-back">
+                                <div class="added-text">Our Mission</div>
+                                <div class="added-subtext">To empower individuals and businesses by delivering
+                                        flawless, high-performing digital products — combining expert development,
+                                        rigorous quality assurance, and stunning visual design to turn ideas into
+                                        impactful realities.</div>
+                            </div>
                         </div>
-                        <div class="card-back">
-                            <div class="added-text">Our Vision</div>
-                            <div class="added-subtext">Our Future</div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-inner">
+                            <div class="card-front">
+                                <div class="product-image"><svg class="product-svg" viewBox="0 0 100 100"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <defs>
+                                            <pattern id="p9" patternUnits="userSpaceOnUse" width="8" height="8">
+                                                <rect class="svg-p-bg" width="8" height="8"></rect>
+                                                <rect class="svg-p-fg" width="4" height="4"></rect>
+                                                <rect class="svg-p-fg" x="4" y="4" width="4" height="4"></rect>
+                                            </pattern>
+                                        </defs>
+                                        <polygon class="svg-s-white" points="50,10 90,30 90,70 50,90 10,70 10,30"
+                                            stroke-width="3"></polygon>
+                                        <polygon class="svg-s-dark" points="50,20 80,35 80,65 50,80 20,65 20,35"
+                                            stroke-width="2"></polygon>
+                                        <rect x="35" y="35" width="30" height="30" fill="url(#p9)"></rect>
+                                        <polygon class="svg-s-white" points="50,25 70,40 50,55 30,40"></polygon>
+                                        <circle class="svg-s-accent" cx="50" cy="45" r="8"></circle>
+                                        <rect class="svg-s-white" x="46" y="41" width="8" height="8"></rect>
+                                        <polygon class="svg-s-white" points="50,60 65,70 50,75 35,70"></polygon>
+                                    </svg></div>
+                                <div class="card-content">
+                                    <div class="product-title">Our Vision</div>
+                                    <div class="product-description">
+
+
+                                     
+                                    </div>
+                                     <div class="buy-button">
+                                        <div><span>Details</span></div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="card-back">
+                                <div class="added-text">Our Vision</div>
+                                <div class="added-subtext">   To be the leading force in digital innovation where quality is never compromised
+                                        — a world where every product we touch is intuitive, reliable, visually
+                                        engaging, and completely bug-free</div>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
         </section>
         <div class="ticker-wrap">
             <div class="ticker">
@@ -1582,10 +1650,10 @@ To be the leading force in digital innovation where quality is never compromised
             </p>
 
 
-            <input type="text" placeholder="name" name="name">
-            <input type="email" placeholder="Email" name="email">
+            <input type="text" required placeholder="name" name="name">
+            <input type="email" required placeholder="Email" name="email">
 
-            <input type="text" name="project" placeholder="tell us about your project" name="whatsapp">
+            <input type="text" name="project" required placeholder="tell us about your project" name="whatsapp">
             <button class="oauthButton">
                 Continue
                 <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
@@ -1605,7 +1673,7 @@ To be the leading force in digital innovation where quality is never compromised
     </footer>
 
     <script>
-           const cards = document.querySelectorAll('.card');
+        const cards = document.querySelectorAll('.card');
         cards.forEach(card => {
             card.addEventListener('click', () => {
                 const cardInner = card.querySelector('.card-inner');
@@ -1623,7 +1691,7 @@ To be the leading force in digital innovation where quality is never compromised
                 nav.classList.toggle('mobile-nav-active');
             });
         }
-        
+
         // --- Dark Mode Toggle ---
         const themeToggleButton = document.getElementById('theme-toggle');
         const body = document.body;
